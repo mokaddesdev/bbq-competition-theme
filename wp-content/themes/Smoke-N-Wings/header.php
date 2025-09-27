@@ -9,12 +9,13 @@
 
 <body <?php body_class(); ?> class="m-0 p-0 bg-[#FFFFFF]">
 
-<header class="w-[1440px]">
-    <div class="container mx-auto py-1.5 px-[100px] flex items-center justify-between">
+<header class="w-[1440px] mx-auto px-[100px] flex items-center justify-between">
 
     <!-- logo -->
     <div class="logo">
+        <a href="<?php echo home_url(); ?>" class="text-white hover:underline">
         <img src="<?php echo get_template_directory_uri()?>/assets/images/logo.png" alt="" class="">
+        </a>
     </div>
     
 
@@ -23,12 +24,19 @@
                 wp_nav_menu([
                     'theme_location' => 'smokeWings_header_menu',
                     'container' => false,
-                    'menu_class' => 'flex items-center gap-6',
+                    'menu_class' => ' pt-1.5 flex items-center gap-[31px] text-black font-bebas-pro font-extrabold text-[20px] leading-[1] tracking-[0.4px] uppercase',
                     'fallback_cb' => false,
                 ]);
                 ?>
             </nav>
-        </div>
+            <div class="button pr-3.5">
+                <a href="#" class="inline-block w-[196px] h-[45px] flex-shrink-0 bg-[#F65600] text-white 
+    font-bebas-pro font-extrabold text-[20px] leading-[1] tracking-[0.4px] uppercase 
+    py-[13.99px] px-[24px] text-center">
+    Enter Competition
+</a>
+
+            </div>
 </header>
 
 <main>

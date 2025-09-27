@@ -6,7 +6,7 @@
 
 @theme{
       --font-jost: "Jost", sans-serif;
-       --font-bebas: "Bebas Neue", sans-serif;
+       --font-bebas-pro: "Bebas Neue", sans-serif;
 }
 
 
@@ -21,27 +21,6 @@ body {
 
 
 
-
-
-a {
-    @apply outline-none no-underline;
-}
-
-a:active {
-	@apply outline-none no-underline;
-	opacity: 1;
-}
-
-a:focus {
-	@apply outline-none no-underline;
-}
-
-a:hover {
-	@apply outline-none no-underline;
-	opacity: 1;
-}
-
-
 ul {
 	@apply list-none;
 }
@@ -50,6 +29,13 @@ ul, li {
 	@apply list-none;
 }
 
+.hero-bg-heading {
+   @apply text-[247px] font-bebas-pro font-extrabold uppercase text-center leading-[1] text-[rgba(248,184,149,0.45)] max-w-[1269px] mx-auto;
+}
+
+.heading-text{
+   @apply text-[48px] font-bebas-pro font-extrabold uppercase tracking-[0.96px] text-white leading-[1];
+}
 
 .laundry_header-menu > div > ul {
     @apply flex items-center;
