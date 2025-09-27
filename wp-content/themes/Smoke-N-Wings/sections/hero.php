@@ -1,4 +1,4 @@
-<section class="relative w-[1440px] h-[601px]">
+<section class="relative w-[1440px] h-[601px] overflow-hidden">
     <!-- Background color layer -->
     <div class="absolute inset-0 bg-[#F8B895] opacity-[0.65] z-0"></div>
 

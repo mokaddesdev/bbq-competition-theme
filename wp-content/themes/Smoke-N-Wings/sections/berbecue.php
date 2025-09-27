@@ -1,8 +1,9 @@
 <section class="relative w-[1440px] mt-10 mb-14 pl-[45px] mx-auto">
 
     <!-- Background huge text layer -->
-    <div class="absolute z-10 opacity-100">
-     <?php get_template_part("svg/smoke_in_wings_svg");?>
+    <div class="absolute right-0 top-0 z-10 opacity-100">
+         <?php get_template_part("svg/berbecue_svg");?>
+  
     </div>
 
     <!-- Foreground content layer -->
@@ -10,7 +11,8 @@
         <!-- left side text -->
         <div class="about-left w-1/2 flex flex-col pt-5 items-start gap-5">
             <h2 class="text-[#16396F] max-w-[550px] font-bebas-pro text-[78px] font-bold leading-[81px] tracking-[1.56px] uppercase">
-                Join us for the <span class="text-[#F65600]">2025 Smoke-N-Wings</span> BBQ Competition!
+                Smokin’ Highlights: The <span class="text-[#F65600]">best bbq</span> in action
+              
             </h2>
 
             <p class="text-black max-w-[533px] font-jost text-[19px] font-normal leading-normal tracking-[0.38px]">
