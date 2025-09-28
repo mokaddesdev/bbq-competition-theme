@@ -11,7 +11,6 @@
 }
 
 
-
 @import "tailwindcss";
 
 @theme{
@@ -20,8 +19,6 @@
        --font-bebas: "Bebas Neue", sans-serif;
 }
 
-
-
 /* ============================================================== 
      # Reset Browsers
 =================================================================== */
@@ -29,8 +26,6 @@
 body {
     @apply box-border m-0 p-0;
 }
-
-
 
 ul {
 	@apply list-none;
@@ -47,7 +42,6 @@ ul, li {
 .heading-text{
    @apply text-[48px] font-bebas-pro font-extrabold uppercase tracking-[0.96px] text-white leading-[1];
 }
-
 
 
 .name-email{
