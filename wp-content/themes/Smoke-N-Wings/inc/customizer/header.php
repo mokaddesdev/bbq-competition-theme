@@ -32,16 +32,6 @@ function smokeWings_header_customizer($wp_customize) {
         'section' => 'header_section',
         'type' => 'text',
     ));
-
-    // Header Button URL
-    $wp_customize->add_setting('header_button_url', array(
-        'default' => __('#', 'smokeWings'),
-    ));
-    $wp_customize->add_control('header_button_url', array(
-        'label' => __('Header Button URL', 'smokeWings'),
-        'section' => 'header_section',
-        'type' => 'url',
-    ));
 }
 
 add_action('customize_register', 'smokeWings_header_customizer');

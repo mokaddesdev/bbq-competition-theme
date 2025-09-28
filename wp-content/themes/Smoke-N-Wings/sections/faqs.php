@@ -1,3 +1,22 @@
+  <?php
+      // Hero image & button texts with default values
+      $faq_image = get_theme_mod('faq_image', get_template_directory_uri() . '/assets/images/faqs.png');
+
+      $faq_title = get_theme_mod('faq_title', 'Frequently Asked Questions');
+
+      $words = explode(' ', $faq_title);
+
+      $first = $words[0] ?? '';
+
+      $second = isset($words[1]) ? '<span class="text-[#F65600]">' . $words[1] . '</span>' : '';
+
+      $rest = '';
+      if (count($words) > 2) {
+        $rest = ' ' . implode(' ', array_slice($words, 2));
+      }
+      $formatted_title = $first . '<br>' . $second . $rest;
+   ?>
+
 <section class="w-[1440px] flex gap-[19.50px] px-[125px]">
   <!-- left image -->
   <div class="w-[626px] relative">
@@ -10,8 +29,8 @@
     <!-- svg -->
     <div class="relative top-0 -left-3 z-20">
       <!-- image -->
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/faqs.png"
-        alt="hero image"
+      <img src="<?php echo esc_url($faq_image); ?>"
+        alt="<?php esc_attr(the_title()) ?>"
         class="w-[574px] h-[495px] object-cover z-20">
     </div>
 
@@ -21,10 +40,8 @@
   <div class=" bg-white w-[626px]">
 
     <h2 class="text-[#16396F] text-right font-bebas-pro text-[78px] font-bold leading-[81px] tracking-[1.56px] uppercase py-8">
-      Frequently <br> <span class="text-[#F65600]"> Asked </span> Questions
+      <?php echo wp_kses_post($formatted_title); ?>
     </h2>
-
-
 
     <?php
     $faqs = new WP_Query(array(
@@ -39,7 +56,7 @@
       $count = 0;
       while ($faqs->have_posts()): $faqs->the_post();
         $count++;
-        
+
         $is_open = ($count === 2);
         $extra_border = ($count === 1) ? 'border-t' : '';
     ?>
