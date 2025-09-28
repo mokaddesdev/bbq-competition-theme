@@ -65,7 +65,6 @@ input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.w-full.p-2.pr-5.
 
 input.wpcf7-form-control.wpcf7-submit.has-spinner{
     @apply inline-block w-[512px] h-[48px] flex-shrink-0 bg-[#F65600] text-white font-bebas-pro font-extrabold text-[20px] leading-[1] tracking-[0.4px] uppercase py-[13.99px] px-[24px] text-center;
-
 }
 
 label.subject-lebel.text-\[\#16396F\].font-bebas.text-\[18px\].font-normal.leading-\[20px\].mb-1.block{

@@ -14,6 +14,10 @@ include_once get_template_directory() . '/inc/enqueue.php';
 // include customizer
 include_once get_template_directory() . '/inc/customizer/header.php';
 include_once get_template_directory() . '/inc/customizer/about.php';
+include_once get_template_directory() . '/inc/customizer/company_info.php';
+include_once get_template_directory() . '/inc/customizer/competition_time_location.php';
+include_once get_template_directory() . '/inc/customizer/hero.php';
+
 
 // Include CPT
 include_once get_template_directory() . '/inc/CPT/faqs.php';

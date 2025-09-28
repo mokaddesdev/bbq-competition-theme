@@ -23,7 +23,7 @@
 
                     <div class="w-[469px] h-[99px] flex-shrink-0 bg-[#FFF4EE] flex items-center justify-between">
 
-                        <!-- 🔵 Left icon box -->
+                        <!-- Left icon box -->
                         <div class="w-[74px] h-[74px] flex-shrink-0 bg-[#16396F] flex items-center justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
                                 <path d="M38.5 33.25V8.75H3.5V33.25H38.5Z" stroke="white" stroke-width="2.625" stroke-miterlimit="10" />
@@ -34,12 +34,13 @@
                             </svg>
                         </div>
 
-                        <!-- 🟠 Center text -->
+                        <!-- Center text -->
                         <p class="text-[#16396F] font-bebas text-[23px] pt-1 font-normal leading-[81px] tracking-[0.46px] uppercase -ml-[90px]">
-                            smokenwingsbbq@gmail.com
+                              <?php echo esc_html(get_theme_mod('company_email', 'smokenwingsbbq@gmail.com')); ?>
+                            
                         </p>
 
-                        <!-- 🔴 Right shape -->
+                        <!-- Right shape -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="85" viewBox="0 0 28 85" fill="none">
                             <path d="M28 0H0L28 85V0Z" fill="#591419" />
                         </svg>
@@ -64,7 +65,7 @@
 
                         <!-- Center text -->
                         <p class="text-[#16396F] font-bebas text-[23px] pt-1 font-normal leading-[81px] tracking-[0.46px] uppercase -ml-[153px]">
-                            Mon - Fri 09:00 - 18:00
+                            <?php echo esc_html(get_theme_mod('service_time', 'Mon - Fri 09:00 - 18:00')); ?>
                         </p>
 
                         <!-- Right shape -->
@@ -86,7 +87,7 @@
 
                         <!-- Center text -->
                         <p class="text-[#16396F] font-bebas text-[23px] pt-1 font-normal leading-[81px] tracking-[0.46px] uppercase -ml-[160px]">
-                            Call (800) 123 45 67
+                             <?php echo esc_html(get_theme_mod('company_phone', 'Call (800) 123 45 67')); ?>
                         </p>
 
                         <!-- Right shape -->

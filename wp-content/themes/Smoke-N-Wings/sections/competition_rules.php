@@ -1,0 +1,118 @@
+<section class="relative w-[1440px] mx-auto">
+
+    <!-- Background huge text layer -->
+    <div class="absolute top-[48px] left-[115px] z-10 opacity-100">
+        <?php get_template_part("svg/smoke_in_wings_svg"); ?>
+    </div>
+
+    <!-- Foreground content layer -->
+    <div class="relative z-20 px-[115px] pt-[93px] w-full">
+
+        <!-- heading -->
+        <div class="heading flex items-center justify-center flex-col gap-4">
+
+            <h2 class="text-[#16396F] text-center font-bebas-pro text-[60px] font-normal leading-[81px] tracking-[1.2px] uppercase">SMOKE-N-WINGS <span class="text-[#F65600]">2024</span> RULES</h2>
+
+            <p class="text-black font-jost text-[18px] font-normal leading-normal tracking-[0.36px] w-[740px] text-center">As a KCBS sanctioned Master Series Contest, all KCBS rules will be followed. The event and the judging will be overseen by the KCBS Contest Representatives assigned to the event. Their decisions and interpretations are final.</p>
+        </div>
+
+        <!-- content section -->
+        <div class="div flex flex-col gap-4">
+
+            <!-- heading -->
+            <div class="top pt-[60px] -ml-3 text-black font-jost text-[24px] font-normal leading-normal tracking-[0.48px] flex flex-col gap-1">
+                <h3>As a Master Series Contest, teams will cook four meats:</h3>
+                <p>The Four KCBS Meat Categories are:</p>
+            </div>
+
+         <!-- card wrapper -->
+<div class="card-wrapper flex flex-wrap gap-4 items-center justify-center">
+    <?php
+    $rules = new WP_Query([
+        'post_type'      => 'post',
+        'posts_per_page' => 4,
+        'post_status'    => 'publish',
+        'order'          => 'DESC',
+        'orderby'        => 'date',
+    ]);
+
+    if ($rules->have_posts()):
+        while ($rules->have_posts()): $rules->the_post(); ?>
+            
+            <div class="w-[588.47px] h-[660.814px] flex-shrink-0 border-[1.08px] border-[#E7E7E7] bg-[rgba(255,228,213,0.40)] rounded-md overflow-hidden">
+                <!-- Image -->
+<?php if(has_post_thumbnail()): ?>
+    <img src="<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'full')); ?>" 
+         alt="<?php the_title_attribute(); ?>" 
+         class="w-[588.47px] h-[321.769px] flex-shrink-0 object-cover">
+<?php else: ?>
+    <img src="placeholder.jpg" 
+         alt="No Image" 
+         class="w-[588.47px] h-[321.769px] flex-shrink-0 object-cover">
+<?php endif; ?>
+
+
+                <!-- Content -->
+                <div class="px-6 py-4 flex flex-col gap-4">
+                    
+                    <!-- Line with left and right text & icon -->
+                 <div class="flex items-center justify-between">
+                        <?php $title = get_the_title(); ?>
+                    <?php if(!empty($title)): ?>
+                        <h2 class="text-black font-bebas text-[44px] font-normal leading-[52.8px] tracking-normal">
+                            <?php echo esc_html($title); ?>
+                        </h2>
+                         <?php endif; ?>
+                         <div class="flex gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23" viewBox="0 0 24 23" fill="none">
+                            <g clip-path="url(#clip0_2012_6)">
+                                <path d="M12.4088 22.7743C18.7491 22.7743 23.9088 17.8389 23.9088 11.7743C23.9088 5.70964 18.7492 0.774292 12.4088 0.774292C6.06843 0.774292 0.908813 5.70964 0.908813 11.7743C0.908813 17.8389 6.06849 22.7743 12.4088 22.7743ZM12.4088 2.24093C17.9058 2.24093 22.3755 6.51625 22.3755 11.7743C22.3755 17.0323 17.9059 21.3077 12.4088 21.3077C6.91177 21.3077 2.44212 17.0323 2.44212 11.7743C2.44212 6.51625 6.91184 2.24093 12.4088 2.24093Z" fill="#F65600" />
+                                <path d="M15.7629 15.2796C15.9048 15.3896 16.0734 15.441 16.2421 15.441C16.4682 15.441 16.6906 15.3457 16.84 15.166C17.1046 14.8507 17.0509 14.3887 16.7212 14.1356L13.1754 11.4223V5.90764C13.1754 5.5043 12.8304 5.17432 12.4087 5.17432C11.9871 5.17432 11.6421 5.5043 11.6421 5.90764V11.7743C11.6421 11.998 11.7494 12.207 11.9296 12.3463L15.7629 15.2796Z" fill="#F65600" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_2012_6">
+                                    <rect width="23" height="22" fill="white" transform="translate(0.908813 0.774292)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                        <!-- Judging text -->
+                    <?php $set_time_field = get_post_meta(get_the_ID(), '_set_time', true);  ?>
+                    <?php if(!empty($set_time_field)): ?>
+                        <p class="text-black font-bebas text-[21px] font-normal leading-[25.2px]">
+                            <?php echo esc_html($set_time_field); ?>
+                        </p>
+                    <?php endif; ?>
+                        </div>
+                    </div>
+
+                    
+
+                    <!-- Description -->
+                    <?php $content = the_content(); ?>
+                    <?php if(!empty($content)): ?>
+                        <p class="text-[#7C7C7C] font-jost text-[20px] font-normal leading-[28px]">
+                            <?php echo esc_html($content); ?>
+                        </p>
+                    <?php endif; ?>
+
+                    <!-- Button -->
+                    <button class="mt-4 bg-[#F65600] text-white font-bebas text-[18px] px-6 py-3 rounded-md w-max">
+                        Read More
+                    </button>
+                </div>
+            </div>
+
+    <?php
+        endwhile;
+        wp_reset_postdata();
+    endif;
+    ?>
+</div>
+
+        </div>
+
+
+
+    </div>
+</section>
