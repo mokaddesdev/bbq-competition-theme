@@ -15,7 +15,6 @@
                     Each team site must have a fire extinguisher and if a stick burner is used some sort of ground protection must be used under the fire box. This may include sheet metal or cement board for.
                 </p>
             </div>
-
         <!-- right side image with SVG overlay -->
         <div class="relative  w-[593px]">
             <div class="relative w-full h-[495px]">

@@ -68,3 +68,47 @@ label.subject-lebel.text-\[\#16396F\].font-bebas.text-\[18px\].font-normal.leadi
 textarea.wpcf7-form-control.wpcf7-textarea.p-2.w-full.pr-5.border.border-gray-300.rounded.placeholder-gray-400{
     @apply h-[150px] mb-2;
 }
+
+
+ /* label all */
+.team-name-label, .team-email-label, .head-cook-label, .address-name-label, .team-phone-label, .kcbs-member-label, .kcbs-phone-label{
+    @apply text-[#16396F] font-bebas text-[18px] font-normal leading-[20px] not-italic;
+}
+
+ /* two raw design */
+.team-name-email, .address-phone-number, .address-phone-number{
+    @apply flex gap-[30px] pt-3 justify-between;
+}
+
+
+  /* input and icon */
+.team-name-input-icon, .team-email-input-icon, .head-input-cook-icon, .address-name-input-icon, .team-phone-input-icon{
+    @apply flex gap-2 p-3 mt-1 border border-gray-200 items-center justify-between;
+}
+
+.address-phone-number{
+    @apply mt-2.5;
+}
+
+input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.team-name-input{
+    @apply w-[186px] outline-none text-[#333] font-jost text-[16px] font-normal leading-[24px];
+}
+
+input.wpcf7-form-control.wpcf7-email.wpcf7-validates-as-required.wpcf7-text.wpcf7-validates-as-email.team-email-input{
+     @apply w-[186px] outline-none text-[#333] font-jost text-[16px] font-normal leading-[24px];
+}
+
+input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.head-cook-input{
+    @apply w-full outline-none;
+}
+input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.team-address-input{
+          @apply w-[186px] outline-none text-[#333] font-jost text-[16px] font-normal leading-[24px];
+}
+
+input.wpcf7-form-control.wpcf7-tel.wpcf7-validates-as-required.wpcf7-text.wpcf7-validates-as-tel.team-phone-input{
+    @apply w-[186px] outline-none text-[#333] font-jost text-[16px] font-normal leading-[24px];
+}
+
+.head-cook{
+    @apply mt-4 w-full;
+}
