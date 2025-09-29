@@ -1,3 +1,10 @@
+    <?php 
+    $title = get_theme_mod('enter_competition_title');
+    $desc  = get_theme_mod('enter_competition_description');
+    $form  = get_theme_mod('enter_competition_form_title');
+    ?>
+
+
 <section class="relative w-[1440px] pl-[127px] pb-[66px] pr-[40px] mx-auto py-5">
 
     <!-- Background huge text layer -->
@@ -11,13 +18,23 @@
        <div class="w-[522px] flex-shrink-0">
           <div class="relative sticky top-1 right-0 -mt-2 w-[522px] flex flex-col gap-3">
                 <h2 class="text-[#16396F] font-bebas text-[60px] font-normal leading-[81px] tracking-[1.2px] uppercase">
-                    Enter Competition
+                 <?php
+                    if ( ! empty( $title ) ) {
+                        echo wp_kses_post( $title );
+                    } else {
+                        echo 'Enter Competition';
+                    }
+                    ?>
                 </h2>
 
                 <p class="text-black font-jost text-[18px] font-normal leading-normal tracking-[0.36px]">
-                    We are excited to welcome your team to the 2024 SMOKE-N-WINGS BBQ CONTEST. Put your skills to the test for your chance to win cash prizes and be crowned the SMOKE-N-WINGS Grand Champion and the Idaho State Champion. 
-                   <br><br>
-                    This KCBS sanctioned competition will be held June 28-29, 2024. Winning will make your team eligible for the American Royal and the Jack Daniels World Championship.
+              <?php
+                    if ( ! empty( $desc ) ) {
+                        echo wp_kses_post( $desc );
+                    } else {
+                        echo 'We are excited to welcome your team to the 2024 SMOKE-N-WINGS BBQ CONTEST. Put your skills to the test for your chance to win cash prizes and be crowned the SMOKE-N-WINGS Grand Champion and the Idaho State Champion.<br><br>This KCBS sanctioned competition will be held June 28-29, 2024. Winning will make your team eligible for the American Royal and the Jack Daniels World Championship.';
+                    }
+                ?>
                 </p>
 
                 <div class="pl-4 pt-4 flex flex-col gap-9">
@@ -107,7 +124,15 @@
             <!-- right side image with SVG overlay -->
                <!-- right -->
  <div class="w-[591px] h-[1397px] -ml-1 flex-shrink-0 bg-white pt-4 px-[39.5px] mx-auto" style="box-shadow: -12px 49px 94px 0 rgba(85,89,90,0.05);">
-                <h2 class="text-[#16396F] font-bebas text-[38px] font-normal leading-[81px] tracking-[0.76px] uppercase"> Complete the <span class="text-[#F65600]">Entry Form</span> Below</h2>
+                <h2 class="text-[#16396F] font-bebas text-[38px] font-normal leading-[81px] tracking-[0.76px] uppercase"> 
+             <?php
+                if ( ! empty( $form ) ) {
+                    echo wp_kses_post( $form );
+                } else {
+                    echo 'Complete the <span class="text-[#F65600]">Entry Form</span> Below';
+                }
+                ?>
+                </h2>
 
                  <?php echo do_shortcode('[contact-form-7 id="cb14ff8" title="Enter Competition"]'); ?>
                 </div>

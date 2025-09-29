@@ -12,11 +12,26 @@
             <!-- left side text -->
             <div class="relative about-left w-[624px] -mt-4 flex flex-col gap-3">
                 <h2 class="text-[#16396F] font-bebas text-[60px] font-normal leading-[81px] tracking-[1.2px] uppercase">
-                    Contact Us
+                    <?php
+                    $left_title = get_theme_mod("contact_form_title");
+                    if ( ! empty( $left_title ) ) {
+                        echo wp_kses_post( $left_title);
+                    } else {
+                        echo ' Contact Us';
+                    }
+                    ?>
+                   
                 </h2>
 
                 <p class="text-black font-jost text-[18px] font-normal leading-normal tracking-[0.36px]">
-                    We will reply as soon as possible
+                     <?php
+                     $description = get_theme_mod('contact_form_description');
+                        if ( ! empty( $description ) ) {
+                            echo wp_kses_post( $description );
+                        } else {
+                            echo 'We will reply as soon as possible';
+                        }
+                        ?>
                 </p>
 
                 <div class="pl-2 pt-7 flex flex-col gap-6">
@@ -104,9 +119,18 @@
 
             <!-- right side image with SVG overlay -->
                <div class="-ml-12 pt-2 pl-[40px] w-[591px] h-[595px] flex-shrink-0 bg-white shadow-[-12px_49px_94px_0_rgba(85,89,90,0.05)]">
-                <h2 class="text-[#16396F] font-bebas text-[38px] font-normal leading-[81px] tracking-[0.76px] uppercase">Leave Us <span class="text-[#F65600]">Message</span></h2>
+                <h2 class="text-[#16396F] font-bebas text-[38px] font-normal leading-[81px] tracking-[0.76px] uppercase">
+                     <?php
+                     $right_title = get_theme_mod('contact_form_right_title');
+                        if ( ! empty( $right_title ) ) {
+                            echo wp_kses_post( $right_title );
+                        } else {
+                            echo 'Leave Us <span class="text-[#F65600]">Message</span>';
+                        }
+                        ?>
+                    </h2>
 
-    <?php echo do_shortcode('[contact-form-7 id="7f08c2e" title="Contact Us"]'); ?>
+                     <?php echo do_shortcode('[contact-form-7 id="7f08c2e" title="Contact Us"]'); ?>
                 </div>
             </div>
         </div>

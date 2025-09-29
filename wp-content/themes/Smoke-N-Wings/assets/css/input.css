@@ -219,7 +219,7 @@ span.wpcf7-list-item-label{
 
 .best-bbq-post-gallery {
     display: flex;
-    gap: 1rem; /* Tailwind gap-4 */
+    gap: 1rem;
 }
 
 .best-bbq-post-gallery .image {
@@ -232,12 +232,6 @@ span.wpcf7-list-item-label{
     align-items: center;
 }
 
-.slick-prev, .slick-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-}
 
 
 

@@ -22,8 +22,10 @@ include_once get_template_directory() . '/inc/customizer/competion_date_banner.p
 include_once get_template_directory() . '/inc/customizer/sponsors.php';
 include_once get_template_directory() . '/inc/customizer/best_bbq_action.php';
 include_once get_template_directory() . '/inc/customizer/footer.php';
+include_once get_template_directory() . '/inc/customizer/enter_competition.php';
+include_once get_template_directory() . '/inc/customizer/contact_form.php';
 
-
+include_once get_template_directory() . '/inc/customizer/featured_sponsor_scholarship.php';
 
 
 
@@ -31,7 +33,7 @@ include_once get_template_directory() . '/inc/customizer/footer.php';
 // Include CPT
 include_once get_template_directory() . '/inc/CPT/faqs.php';
 include_once get_template_directory() . '/inc/CPT/bestbbq.php';
-include_once get_template_directory() . '/inc/CPT/kids.php';
+include_once get_template_directory() . '/inc/CPT/kids_cooksite.php';
 include_once get_template_directory() . '/inc/CPT/sponsors.php';
 
 
