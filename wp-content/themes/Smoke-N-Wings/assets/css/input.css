@@ -47,35 +47,8 @@ ul, li {
 }
 
 
-.name-email{
-    @apply flex gap-8 -mt-4;
-}
-
-input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.w-full.p-2.pr-5.border.border-gray-300.rounded.placeholder-gray-400{
-    @apply w-[240px] text-[#333] font-jost text-[16px] font-normal leading-[24px];
-
-}
-
-input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.w-full.p-2.pr-5.border.border-gray-300.rounded{
-    @apply w-[240px] pt-2 pl-2 text-[#333] font-jost text-[16px] font-normal leading-[24px];
-}
-
-input.wpcf7-form-control.wpcf7-submit.has-spinner{
-    @apply inline-block w-[512px] h-[48px] flex-shrink-0 bg-[#F65600] text-white font-bebas-pro font-extrabold text-[20px] leading-[1] tracking-[0.4px] uppercase py-[13.99px] px-[24px] text-center;
-}
-
-label.subject-lebel.text-\[\#16396F\].font-bebas.text-\[18px\].font-normal.leading-\[20px\].mb-1.block{
-    @apply -mt-1.5;
-}
-
-textarea.wpcf7-form-control.wpcf7-textarea.p-2.w-full.pr-5.border.border-gray-300.rounded.placeholder-gray-400{
-    @apply h-[150px] mb-2;
-}
-
-
-
  /* label all */
-.team-name-label, .team-email-label, .head-cook-label, .address-name-label, .team-phone-label, .kcbs-member-label, .kcbs-phone-label{
+.team-name-label, .team-email-label, .head-cook-label, .address-name-label, .team-phone-label, .kcbs-member-label, .kcbs-phone-label, .first_name-label, .contact-email-label, .contact-subject-label, .contact-message-label{
     @apply text-[#16396F] font-bebas text-[18px] font-normal leading-[20px] not-italic;
 }
 
@@ -301,6 +274,27 @@ textarea#child-message{
 }
 
 
+/* contact form design */
+
+.first_name-email{
+    @apply flex gap-[29px] mt-3 mb-5;
+}
+
+
+input#first-name-input, input#contact-email{
+     @apply text-[#7C7C7C] w-[240.60px] font-jost text-[16px] font-normal leading-[24px] px-3.5 pt-[14px] pb-2 mt-0.5 outline-none border border-[#CCCCCC];
+}
+input#contact-subject{
+    @apply text-[#7C7C7C] w-[512px] font-jost text-[16px] font-normal leading-[24px] px-3.5 py-[12px] mt-1.5 mb-5 outline-none border border-[#CCCCCC];
+}
+
+textarea#contact-message{
+         @apply text-[#7C7C7C] mt-1 w-[512px] h-[128px] font-jost text-[16px] font-normal leading-[24px] appearance-none px-3.5 py-[10px] outline-none border border-[#CCCCCC];
+}
+
+input#contact-form{
+     @apply inline-block w-[512px] mt-8 h-[48px] flex-shrink-0 bg-[#F65600] text-white font-bebas text-[20px] font-normal leading-normal tracking-[0.4px] uppercase py-[6px];
+}
 
 /* Success Message Style */
 .wpcf7 form.sent .wpcf7-response-output {
@@ -312,6 +306,8 @@ textarea#child-message{
 .wpcf7 form.invalid .wpcf7-response-output {
   @apply text-white bg-[#F65600] border-0 text-center px-5 py-3 rounded-lg;
 }
+
+
 
 
 

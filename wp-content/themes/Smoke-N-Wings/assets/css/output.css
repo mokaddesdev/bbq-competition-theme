@@ -381,8 +381,14 @@
   .my-\[85px\] {
     margin-block: 85px;
   }
+  .-mt-0 {
+    margin-top: calc(var(--spacing) * -0);
+  }
   .-mt-0\.5 {
     margin-top: calc(var(--spacing) * -0.5);
+  }
+  .-mt-1 {
+    margin-top: calc(var(--spacing) * -1);
   }
   .-mt-1\.5 {
     margin-top: calc(var(--spacing) * -1.5);
@@ -468,6 +474,9 @@
   .-ml-\[90px\] {
     margin-left: calc(90px * -1);
   }
+  .-ml-\[148px\] {
+    margin-left: calc(148px * -1);
+  }
   .-ml-\[153px\] {
     margin-left: calc(153px * -1);
   }
@@ -497,6 +506,9 @@
   }
   .inline-flex {
     display: inline-flex;
+  }
+  .table {
+    display: table;
   }
   .h-6 {
     height: calc(var(--spacing) * 6);
@@ -606,11 +618,17 @@
   .h-full {
     height: 100%;
   }
+  .w-5 {
+    width: calc(var(--spacing) * 5);
+  }
   .w-5\/12 {
     width: calc(5/12 * 100%);
   }
   .w-6 {
     width: calc(var(--spacing) * 6);
+  }
+  .w-7 {
+    width: calc(var(--spacing) * 7);
   }
   .w-7\/12 {
     width: calc(7/12 * 100%);
@@ -774,8 +792,18 @@
   .max-w-\[1269px\] {
     max-width: 1269px;
   }
+  .flex-shrink {
+    flex-shrink: 1;
+  }
   .flex-shrink-0 {
     flex-shrink: 0;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .-translate-x-1 {
+    --tw-translate-x: calc(var(--spacing) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-x-1\/2 {
     --tw-translate-x: calc(calc(1/2 * 100%) * -1);
@@ -815,6 +843,9 @@
   }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .resize {
+    resize: both;
   }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1133,6 +1164,9 @@
   .py-\[30px\] {
     padding-block: 30px;
   }
+  .pt-0 {
+    padding-top: calc(var(--spacing) * 0);
+  }
   .pt-0\.5 {
     padding-top: calc(var(--spacing) * 0.5);
   }
@@ -1235,6 +1269,9 @@
   .pt-\[175px\] {
     padding-top: 175px;
   }
+  .pr-3 {
+    padding-right: calc(var(--spacing) * 3);
+  }
   .pr-3\.5 {
     padding-right: calc(var(--spacing) * 3.5);
   }
@@ -1268,8 +1305,23 @@
   .pb-10 {
     padding-bottom: calc(var(--spacing) * 10);
   }
+  .pb-\[2px\] {
+    padding-bottom: 2px;
+  }
   .pb-\[21\.56px\] {
     padding-bottom: 21.56px;
+  }
+  .pb-\[24px\] {
+    padding-bottom: 24px;
+  }
+  .pb-\[25px\] {
+    padding-bottom: 25px;
+  }
+  .pb-\[26px\] {
+    padding-bottom: 26px;
+  }
+  .pb-\[30px\] {
+    padding-bottom: 30px;
   }
   .pb-\[34px\] {
     padding-bottom: 34px;
@@ -1279,6 +1331,18 @@
   }
   .pb-\[88\.99px\] {
     padding-bottom: 88.99px;
+  }
+  .pb-\[px\] {
+    padding-bottom: px;
+  }
+  .pl-0 {
+    padding-left: calc(var(--spacing) * 0);
+  }
+  .pl-0\.5 {
+    padding-left: calc(var(--spacing) * 0.5);
+  }
+  .pl-1 {
+    padding-left: calc(var(--spacing) * 1);
   }
   .pl-1\.5 {
     padding-left: calc(var(--spacing) * 1.5);
@@ -1627,6 +1691,9 @@
   .not-italic {
     font-style: normal;
   }
+  .underline {
+    text-decoration-line: underline;
+  }
   .opacity-0 {
     opacity: 0%;
   }
@@ -1653,6 +1720,10 @@
   .shadow-xl {
     --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .transition-all {
     transition-property: all;
@@ -1784,61 +1855,7 @@ ul, li {
   color: var(--color-white);
   text-transform: uppercase;
 }
-.name-email {
-  margin-top: calc(var(--spacing) * -4);
-  display: flex;
-  gap: calc(var(--spacing) * 8);
-}
-input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.w-full.p-2.pr-5.border.border-gray-300.rounded.placeholder-gray-400 {
-  width: 240px;
-  font-family: var(--font-jost);
-  font-size: 16px;
-  --tw-leading: 24px;
-  line-height: 24px;
-  --tw-font-weight: var(--font-weight-normal);
-  font-weight: var(--font-weight-normal);
-  color: #333;
-}
-input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.w-full.p-2.pr-5.border.border-gray-300.rounded {
-  width: 240px;
-  padding-top: calc(var(--spacing) * 2);
-  padding-left: calc(var(--spacing) * 2);
-  font-family: var(--font-jost);
-  font-size: 16px;
-  --tw-leading: 24px;
-  line-height: 24px;
-  --tw-font-weight: var(--font-weight-normal);
-  font-weight: var(--font-weight-normal);
-  color: #333;
-}
-input.wpcf7-form-control.wpcf7-submit.has-spinner {
-  display: inline-block;
-  height: 48px;
-  width: 512px;
-  flex-shrink: 0;
-  background-color: #F65600;
-  padding-inline: 24px;
-  padding-block: 13.99px;
-  text-align: center;
-  font-family: var(--font-bebas-pro);
-  font-size: 20px;
-  --tw-leading: 1;
-  line-height: 1;
-  --tw-font-weight: var(--font-weight-extrabold);
-  font-weight: var(--font-weight-extrabold);
-  --tw-tracking: 0.4px;
-  letter-spacing: 0.4px;
-  color: var(--color-white);
-  text-transform: uppercase;
-}
-label.subject-lebel.text-\[\#16396F\].font-bebas.text-\[18px\].font-normal.leading-\[20px\].mb-1.block {
-  margin-top: calc(var(--spacing) * -1.5);
-}
-textarea.wpcf7-form-control.wpcf7-textarea.p-2.w-full.pr-5.border.border-gray-300.rounded.placeholder-gray-400 {
-  margin-bottom: calc(var(--spacing) * 2);
-  height: 150px;
-}
-.team-name-label, .team-email-label, .head-cook-label, .address-name-label, .team-phone-label, .kcbs-member-label, .kcbs-phone-label {
+.team-name-label, .team-email-label, .head-cook-label, .address-name-label, .team-phone-label, .kcbs-member-label, .kcbs-phone-label, .first_name-label, .contact-email-label, .contact-subject-label, .contact-message-label {
   font-family: var(--font-bebas);
   font-size: 18px;
   --tw-leading: 20px;
@@ -2339,6 +2356,89 @@ textarea#child-message {
   color: var(--color-white);
   text-transform: capitalize;
 }
+.first_name-email {
+  margin-top: calc(var(--spacing) * 3);
+  margin-bottom: calc(var(--spacing) * 5);
+  display: flex;
+  gap: 29px;
+}
+input#first-name-input, input#contact-email {
+  margin-top: calc(var(--spacing) * 0.5);
+  width: 240.60px;
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: #CCCCCC;
+  padding-inline: calc(var(--spacing) * 3.5);
+  padding-top: 14px;
+  padding-bottom: calc(var(--spacing) * 2);
+  font-family: var(--font-jost);
+  font-size: 16px;
+  --tw-leading: 24px;
+  line-height: 24px;
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
+  color: #7C7C7C;
+  --tw-outline-style: none;
+  outline-style: none;
+}
+input#contact-subject {
+  margin-top: calc(var(--spacing) * 1.5);
+  margin-bottom: calc(var(--spacing) * 5);
+  width: 512px;
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: #CCCCCC;
+  padding-inline: calc(var(--spacing) * 3.5);
+  padding-block: 12px;
+  font-family: var(--font-jost);
+  font-size: 16px;
+  --tw-leading: 24px;
+  line-height: 24px;
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
+  color: #7C7C7C;
+  --tw-outline-style: none;
+  outline-style: none;
+}
+textarea#contact-message {
+  margin-top: calc(var(--spacing) * 1);
+  height: 128px;
+  width: 512px;
+  appearance: none;
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: #CCCCCC;
+  padding-inline: calc(var(--spacing) * 3.5);
+  padding-block: 10px;
+  font-family: var(--font-jost);
+  font-size: 16px;
+  --tw-leading: 24px;
+  line-height: 24px;
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
+  color: #7C7C7C;
+  --tw-outline-style: none;
+  outline-style: none;
+}
+input#contact-form {
+  margin-top: calc(var(--spacing) * 8);
+  display: inline-block;
+  height: 48px;
+  width: 512px;
+  flex-shrink: 0;
+  background-color: #F65600;
+  padding-block: 6px;
+  font-family: var(--font-bebas);
+  font-size: 20px;
+  --tw-leading: var(--leading-normal);
+  line-height: var(--leading-normal);
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
+  --tw-tracking: 0.4px;
+  letter-spacing: 0.4px;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
 .wpcf7 form.sent .wpcf7-response-output {
   position: relative;
   margin-top: calc(var(--spacing) * 5);
@@ -2539,6 +2639,11 @@ textarea#child-message {
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
@@ -2598,6 +2703,7 @@ textarea#child-message {
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-ease: initial;
     }

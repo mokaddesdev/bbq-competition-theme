@@ -1,4 +1,4 @@
-<section class="relative w-[1440px] pl-[127px] pb-[66px] pr-[40px] mx-auto py-5">
+<section class="relative w-[1440px] pl-[127px] pb-[25px] pr-[40px] mx-auto py-5">
 
     <!-- Background huge text layer -->
     <div class="absolute top-6 right-0 z-10 opacity-100">
@@ -11,26 +11,26 @@
         <div class="flex gap-[10px]">
             <!-- left side text -->
             <div class="relative about-left w-[624px] -mt-4 flex flex-col gap-3">
-                <h2 class="text-[#16396F] font-bebas text-[60px] font-normal leading-[81px] tracking-[1.2px] uppercase">
+                <h2 class="text-[#16396F] pl-0.5 font-bebas text-[60px] font-normal leading-[81px] tracking-[1.2px] uppercase">
                     <?php
                     $left_title = get_theme_mod("contact_form_title");
-                    if ( ! empty( $left_title ) ) {
+                    if ( ! empty( $left_title ) ) :
                         echo wp_kses_post( $left_title);
-                    } else {
+                     else :
                         echo ' Contact Us';
-                    }
+                     endif;
                     ?>
                    
                 </h2>
 
-                <p class="text-black font-jost text-[18px] font-normal leading-normal tracking-[0.36px]">
+                <p class="text-black font-jost pt-0.5 text-[18px] font-normal leading-normal tracking-[0.36px]">
                      <?php
                      $description = get_theme_mod('contact_form_description');
-                        if ( ! empty( $description ) ) {
+                        if ( ! empty( $description ) ) :
                             echo wp_kses_post( $description );
-                        } else {
+                        else :
                             echo 'We will reply as soon as possible';
-                        }
+                        endif;
                         ?>
                 </p>
 
@@ -79,7 +79,7 @@
                         </div>
 
                         <!-- Center text -->
-                        <p class="text-[#16396F] font-bebas text-[23px] pt-1 font-normal leading-[81px] tracking-[0.46px] uppercase -ml-[153px]">
+                        <p class="text-[#16396F] font-bebas text-[23px] pt-1 font-normal leading-[81px] tracking-[0.46px] uppercase -ml-[148px]">
                             <?php echo esc_html(get_theme_mod('service_time', 'Mon - Fri 09:00 - 18:00')); ?>
                         </p>
 
@@ -122,11 +122,11 @@
                 <h2 class="text-[#16396F] font-bebas text-[38px] font-normal leading-[81px] tracking-[0.76px] uppercase">
                      <?php
                      $right_title = get_theme_mod('contact_form_right_title');
-                        if ( ! empty( $right_title ) ) {
+                        if ( ! empty( $right_title ) ) :
                             echo wp_kses_post( $right_title );
-                        } else {
+                         else :
                             echo 'Leave Us <span class="text-[#F65600]">Message</span>';
-                        }
+                         endif;
                         ?>
                     </h2>
 
