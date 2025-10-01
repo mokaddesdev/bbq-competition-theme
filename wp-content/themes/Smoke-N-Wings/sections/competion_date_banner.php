@@ -11,15 +11,18 @@ $description = get_theme_mod('competition_held_description','Friday June 28, 202
 
 ?>
 
-<section class="relative w-full h-[349.5px] my-[85px] overflow-hidden">
+<section class="relative w-full h-[349.5px] my-[80px] overflow-hidden">
     <!-- Background SVGs -->
     <div class="absolute inset-0 flex overflow-hidden">
         <!-- first background -->
-        <div class="-rotate-[78.84deg] absolute top-0 -left-[174px] w-[1016px] h-[374px]">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1016 374" fill="none" class="w-full h-full">
-                <path d="M1010 6V367.5H7.7168L9.11133 360.352L77.29 10.8516L78.2363 6H1010Z" fill="#16396F" stroke="white" stroke-width="12"/>
-            </svg>
-        </div>
+<div class="relative absolute top-0 -left-[174px] w-[1016px] h-[374px] -rotate-[78.84deg]">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1016 374" fill="none" class="w-full h-full">
+        <path d="M1010 6V367.5H7.7168L9.11133 360.352L77.29 10.8516L78.2363 6H1010Z" fill="#16396F" stroke="white" stroke-width="12"/>
+    </svg>
+    
+   
+</div>
+
 
         <!-- second background -->
         <div class="-rotate-[78.84deg] absolute top-0 -left-[72px] w-[1016px] h-[374px]">

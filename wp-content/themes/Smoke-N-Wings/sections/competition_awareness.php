@@ -17,7 +17,7 @@
   </div>
 
   <!-- right side text -->
-  <div class="relative about-left py-8 pl-9 w-[600px] flex flex-col gap-9">
+  <div class="relative about-left py-8 pl-9 w-[600px] flex flex-col gap-6">
 
     <!-- heading one line -->
     <h2 class="text-[#16396F] font-bebas-pro text-[60px] font-bold leading-[81px] tracking-[1.56px] uppercase whitespace-nowrap">
@@ -25,9 +25,10 @@
     </h2>
 
     <!-- paragraph -->
-    <p class="w-[570px] text-black font-jost pt-0.5 text-[18px] font-normal leading-normal tracking-[0.36px]">
+    <p class="w-[570px] text-black font-jost pt-4 text-[18px] font-normal leading-normal tracking-[0.36px]">
      Fire lanes and emergency access shall be maintained at all times.Ashes and grease must be disposed of in provided containers located close to the cook sites. Team site will be left with no garbage, ashes, debris or liquid/grease spills. If site is not left in a Clean manner the city will clean the site and bill the team for the labor involved.
-      <br><br>
+      </p>
+      <p class="w-[570px] text-black font-jost -mt-1.5 text-[18px] font-normal leading-normal tracking-[0.36px]">
      All teams equipment, vehicles, trailers, cookers, awnings etc. must stay within teams assigned cook area. A parking area will be available nearby for vehicles that don’t fit within cook site.Water will be available as well as gray water disposal area. Electricity will not be provided. Please plan accordingly Each cook site will have a brief health department inspection along with their meat inspection.
     </p>
 

@@ -20,7 +20,7 @@
     </div>
 
     <!-- Foreground content layer -->
-    <div class="relative z-20 px-[120px] pt-[50px] w-full flex flex-col gap-6">
+    <div class="relative z-20 px-[125px] pt-[50px] w-full flex flex-col gap-6">
         <!-- side right side button text -->
         <div class="relative w-full flex justify-between">
             <!-- left -->
@@ -51,7 +51,7 @@
         </div>
 
         <!-- image gallery-->
-    <div class="images best-bbq-post-gallery flex gap-4 overflow-hidden">
+    <div class="images best-bbq-post-gallery">
             <?php
             $latest_gallery = new WP_Query([
                 'post_type'      => 'best_bbq',

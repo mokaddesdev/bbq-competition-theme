@@ -17,7 +17,7 @@
       $formatted_title = $first . '<br>' . $second . $rest;
    ?>
 
-<section class="w-[1440px] flex gap-[19.50px] px-[125px]">
+<section class="w-[1440px] pt-3 flex gap-[19.50px] px-[125px]">
   <!-- left image -->
   <div class="w-[626px] relative">
     <div class="absolute top-0 left-1 z-0">
