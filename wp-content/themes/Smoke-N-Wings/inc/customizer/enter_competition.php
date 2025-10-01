@@ -20,7 +20,7 @@ function smokeWings_enter_competition_customizer($wp_customize) {
     $wp_customize->add_control('enter_competition_title', array(
         'label'   => __('Enter Competition Title', 'smokeWings'),
         'section' => 'enter_competition_section',
-        'type'    => 'text',
+        'type'    => 'textarea',
     ));
 
     // Description
@@ -47,7 +47,7 @@ function smokeWings_enter_competition_customizer($wp_customize) {
     $wp_customize->add_control('enter_competition_form_title', array(
         'label'   => __('Enter Competition Form Title', 'smokeWings'),
         'section' => 'enter_competition_section',
-        'type'    => 'text',
+        'type'    => 'textarea',
     ));
 }
 add_action('customize_register', 'smokeWings_enter_competition_customizer');

@@ -6,7 +6,7 @@
 <?php get_template_part("sections/competition_awareness");?>
 <?php get_template_part("sections/competition_time_location_rules");?>
 <?php get_template_part("sections/competition_item");?>
-<?php get_template_part("sections/competion_date_banner");?>
+<?php get_template_part("sections/competion_date_banner_shap_div");?>
 <?php get_template_part("sections/contestant_responsibility");?>
 
 <?php get_footer();?>

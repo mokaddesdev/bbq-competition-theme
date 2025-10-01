@@ -2,19 +2,7 @@
       // Hero image & button texts with default values
       $faq_image = get_theme_mod('faq_image', get_template_directory_uri() . '/assets/images/faqs.png');
 
-      $faq_title = get_theme_mod('faq_title', 'Frequently Asked Questions');
-
-      $words = explode(' ', $faq_title);
-
-      $first = $words[0] ?? '';
-
-      $second = isset($words[1]) ? '<span class="text-[#F65600]">' . $words[1] . '</span>' : '';
-
-      $rest = '';
-      if (count($words) > 2) {
-        $rest = ' ' . implode(' ', array_slice($words, 2));
-      }
-      $formatted_title = $first . '<br>' . $second . $rest;
+      $faq_title = get_theme_mod('faqs_heading_title', 'Frequently <span class="text-[#F65600]"> Asked </span> Questions');
    ?>
 
 <section class="w-[1440px] pt-3 flex gap-[19.50px] px-[125px]">
@@ -40,7 +28,7 @@
   <div class=" bg-white w-[626px]">
 
     <h2 class="text-[#16396F] text-right font-bebas-pro text-[78px] font-bold leading-[81px] tracking-[1.56px] uppercase py-8">
-      <?php echo wp_kses_post($formatted_title); ?>
+      <?php echo wp_kses_post(nl2br($faq_title)); ?>
     </h2>
 
     <?php

@@ -1,16 +1,6 @@
 <section class="relative w-[1440px] mx-auto">
   <?php 
-     $best_bbq_title = get_theme_mod('best_bbq_show_section_title');
-       $words = explode(' ', trim($best_bbq_title));
-            $first_three = array_slice($words, 0, 3);
-            $first_three_string = implode(' ', $first_three);
-
-            $midle_two = array_slice($words, 3, 2);
-            $midle_two_string = implode(' ', $midle_two);
-
-            $remaining = array_slice($words, 5);
-            $remaining_string = implode(' ', $remaining);
-
+     $best_bbq_title = get_theme_mod('best_bbq_gallery_heading_title', 'Smokin’ Highlights: The <span class="text-[#F65600]"> best bbq </span>in action');
  
   ?>
     <!-- Background huge text layer -->
@@ -26,12 +16,7 @@
             <!-- left -->
             <div class="about-left w-[626px] flex flex-col pt-[22px] items-start gap-5">
                 <h2 class="text-[#16396F]  font-bebas-pro text-[78px] font-bold leading-[81px] tracking-[1.56px] uppercase">
-                    <?php echo $first_three_string;?>
-                    <span class="text-[#F65600]">
-                        <?php echo $midle_two_string; ?>
-                    </span>
-                    <?php echo $remaining_string;?>
-
+                    <?php echo wp_kses_post(nl2br($best_bbq_title));?>
                 </h2>
             </div>
             <!-- right -->

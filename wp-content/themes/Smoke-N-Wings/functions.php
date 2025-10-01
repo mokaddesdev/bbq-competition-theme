@@ -17,9 +17,11 @@ include_once get_template_directory() . '/inc/customizer/about.php';
 include_once get_template_directory() . '/inc/customizer/company_info.php';
 include_once get_template_directory() . '/inc/customizer/competition_time_location.php';
 include_once get_template_directory() . '/inc/customizer/hero.php';
-include_once get_template_directory() . '/inc/customizer/faqs.php';
+include_once get_template_directory() . '/inc/customizer/faqs_heading.php';
 include_once get_template_directory() . '/inc/customizer/competion_date_banner.php';
-include_once get_template_directory() . '/inc/customizer/best_bbq_action.php';
+
+include_once get_template_directory() . '/inc/customizer/best_bbq_gallery_heading.php';
+
 include_once get_template_directory() . '/inc/customizer/footer.php';
 include_once get_template_directory() . '/inc/customizer/enter_competition.php';
 include_once get_template_directory() . '/inc/customizer/contact_form.php';

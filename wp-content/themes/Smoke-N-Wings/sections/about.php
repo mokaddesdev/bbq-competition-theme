@@ -1,17 +1,6 @@
 <?php
 // Get customizer values with default fallback
-$about_title = get_theme_mod('about_title', 'Join us for the 2025 Smoke-N-Wings BBQ Competition!');
-
-
-$location_words = explode(' ', $about_title);
-
-$first_four_words = implode(' ', array_slice($location_words, 0, 4));
-
-
-$next_two_words = implode(' ', array_slice($location_words, 4, 2));
-
-
-$remaining_words = implode(' ', array_slice($location_words, 6));
+$about_title = get_theme_mod('about_title', 'Join us for the <span class="text-[#F65600]"> 2025 Smoke-N-Wings </span> BBQ Competition!');
 
 $about_description = get_theme_mod('about_description', 'Teams from all around the area will compete in this KCBS sanctioned, Idaho State Competition. Teams will cook chicken, ribs, pork and brisket. The winning team will be crowned the SMOKE-N-WINGS winner and the Idaho State Champions and be eligible for the American Royal and the Jack Daniels World Championship.');
 
@@ -32,7 +21,11 @@ $about_left_image = get_theme_mod('about_left_image', get_template_directory_uri
     <div class="relative z-20 flex gap-12 px-[125px] pt-[97px] w-full">
         <!-- left side text -->
         <div class="about-left py-[13px] w-[549px] flex flex-col items-start gap-5">
-            <h2 class="text-[#16396F] max-w-[550px] font-bebas-pro text-[78px] font-bold leading-[81px] tracking-[1.56px] uppercase"> <?php echo $first_four_words;?> <span class="text-[#F65600]"> <?php echo $next_two_words ?></span> <?php echo $remaining_words ?></h2>
+             <?php if(!empty($about_title)): ?>
+            <h2 class="text-[#16396F] max-w-[550px] font-bebas-pro text-[78px] font-bold leading-[81px] tracking-[1.56px] uppercase">
+                 <?php echo wp_kses_post($about_title); ?>
+                </h2>
+                <?php endif; ?>
 
             <?php if(!empty($about_description)): ?>
             <p class="text-black max-w-[533px] font-jost text-[19px] font-normal leading-normal tracking-[0.38px]">

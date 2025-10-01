@@ -22,7 +22,7 @@ $description = get_theme_mod('competition_held_description','Friday June 28, 202
           <div class="relative h-[550px] w-[87px] bg-[#16396F] rotate-[11deg]">
             <!-- Text -->
             <?php if ( !empty($type_title) ) : ?>
-            <h2 class="absolute top-68 left-6/12 -translate-x-1/2 whitespace-nowrap text-white font-bold text-[48px] leading-normal tracking-[0.96px] uppercase font-bebas-pro z-50 rotate-[-89.44deg]">
+            <h2 class="absolute bottom-52 left-6/12 -translate-x-1/2 whitespace-nowrap text-white font-bold text-[48px] leading-normal tracking-[0.96px] uppercase font-bebas-pro z-50 rotate-[-89.44deg]">
             <?php echo esc_html($type_title); ?>
             </h2>
             <?php endif; ?>
@@ -30,7 +30,7 @@ $description = get_theme_mod('competition_held_description','Friday June 28, 202
           <!-- second shape -->
           <div class="h-[550px] w-[87px] bg-[#F65600] rotate-[11deg]">
             <?php if ( !empty($end_date) ) : ?>
-              <h2 class="absolute top-40 left-7/12 -translate-x-1/2 whitespace-nowrap text-white font-bold text-[48px] leading-normal tracking-[0.96px] uppercase font-bebas-pro z-50 rotate-[-89.44deg]">
+              <h2 class="absolute bottom-80 left-7/12 -translate-x-1/2 whitespace-nowrap text-white font-bold text-[48px] leading-normal tracking-[0.96px] uppercase font-bebas-pro z-50 rotate-[-89.44deg]">
             <?php echo esc_html($end_date); ?>
           </h2>
           <?php endif; ?>

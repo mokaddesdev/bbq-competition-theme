@@ -12,21 +12,22 @@ function smokeWings_about_customizer($customizer){
     ));
 
     $customizer->add_setting('about_title', array(
-        'default' => __('Join us for the 2025
-Smoke-N-Wings BBQ Competition!', 'smokeWings'),
+        'default' => __('Join us for the <span class="text-[#F65600]"> 2025 Smoke-N-Wings </span> BBQ Competition!'),
+        'sanitize_callback' => 'wp_kses_post',
     ));
     $customizer->add_control('about_title', array(
         'label' => __('About Title', 'smokeWings'),
         'section' => '_about_section',
-        'type' => 'text',
+        'type' => 'textarea',
     ));
 
     
     //description
 
     $customizer->add_setting('about_description', array(
-        'default' => __('Teams from all around the area will compete in this KCBS sanctioned, Idaho State Competition. Teams will cook chicken, ribs, pork and brisket. 
-The winning team will be crowned the SMOKE-N-WINGS winner and the Idaho State Champions and be eligible for the American Royal and the Jack Daniels World Championship.', 'smokeWings'),
+        'default' => __('Teams from all around the area will compete in this KCBS sanctioned, Idaho State Competition. Teams will cook chicken, ribs, pork and brisket.
+        The winning team will be crowned the SMOKE-N-WINGS winner and the Idaho State Champions and be eligible for the American Royal and the Jack Daniels World Championship.', 'smokeWings'),
+        'sanitize_callback' => 'wp_kses_post',
     ));
     $customizer->add_control('about_description', array(
         'label' => __('About Description', 'smokeWings'),
