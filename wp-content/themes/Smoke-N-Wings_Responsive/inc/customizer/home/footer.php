@@ -14,8 +14,8 @@ function smokeWings_footer_customize_register($wp_customize)
 
      // Footer Description
     $wp_customize->add_setting('footer_title', array(
-        'default' => __('Smoke-N-Wings
-BBQ Competition', 'smokeWings'),
+        'default' => __('Smoke-N-Wings <span class="text-[#F65600]"> BBQ </span> Competition', 'smokeWings'),
+        'sanitize_callback' => 'wp_kses_post',
     ));
     $wp_customize->add_control('footer_title', array(
         'label' => __('Footer Title', 'smokeWings'),

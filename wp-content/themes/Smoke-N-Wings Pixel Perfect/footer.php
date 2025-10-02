@@ -1,27 +1,19 @@
-<footer class="w-[1440px] h-[341px] mt-[92px] bg-[#16396F] ">
-    <!-- footer-content -->
-    <div class="footer-content mx-auto px-[125px] pt-[60px] flex justify-between">
-        <?php
-        $footer_logo_title = get_theme_mod('footer_title', 'Smoke-N-Wings BBQ Competition');
-
-        $words = explode(' ', trim($footer_logo_title));
-        $first_word = isset($words[0]) ? $words[0] : '';
-        $second_word = isset($words[1]) ? $words[1] : '';
-
-        $remaining_words = array_slice($words, 2);
-        $remaining_string = implode(' ', $remaining_words);
+  <?php
+        $footer_logo_title = get_theme_mod('footer_title', 'Smoke-N-Wings <span class="text-[#F65600]"> BBQ </span> Competition');
 
         $footer_button_text = get_theme_mod('footer_button_title', 'Enter Competition');
         ?>
+
+
+<footer class="w-[1440px] h-[341px] mt-[92px] bg-[#16396F] ">
+    <!-- footer-content -->
+    <div class="footer-content mx-auto px-[125px] pt-[60px] flex justify-between">
+
         <!-- footer left -->
         <div class="footer-text w-7/12">
             <a href="<?php echo home_url();?>">
             <h3 class="text-[#FFE4D5] font-bebas-pro text-[115px] font-bold leading-[102px] tracking-[2.3px] uppercase">
-                <?php echo  $first_word; ?> <span class="text-[#F65600]">
-                    <?php echo  $second_word; ?>
-                </span>
-                <?php echo  $remaining_string; ?>
-
+                <?php echo  wp_kses_post($footer_logo_title); ?>
             </h3>
             </a>
         </div>

@@ -9,7 +9,9 @@
 
 <body <?php body_class(); ?> class="m-0 p-0 bg-[#FFFFFF]">
 
-<header class="w-[1440px] mx-auto <?php echo is_front_page() ? 'py-0' : 'py-1'; ?> px-[100px] flex items-center justify-between">
+<header class="w-full px-[2.5%] md:px-[3%] lg:px-[4.5%] 2xl:px-[6.944%] mx-auto <?php echo is_front_page() ? 'py-0' : 'py-1'; ?>">
+
+<div class="header-container mx-auto max-w-[1300px] flex items-center justify-between">
 
     <!-- logo -->
     <div class="logo">
@@ -46,7 +48,8 @@
                 'Enter Competition' 
             ) ); ?>
         </a>
-    </div>
+     </div>
+   </div>
 
 </header>
 

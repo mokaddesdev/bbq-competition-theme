@@ -1,32 +1,25 @@
-<footer class="w-[1440px] h-[341px] mt-[92px] bg-[#16396F] ">
-    <!-- footer-content -->
-    <div class="footer-content mx-auto px-[125px] pt-[60px] flex justify-between">
-        <?php
-        $footer_logo_title = get_theme_mod('footer_title', 'Smoke-N-Wings BBQ Competition');
-
-        $words = explode(' ', trim($footer_logo_title));
-        $first_word = isset($words[0]) ? $words[0] : '';
-        $second_word = isset($words[1]) ? $words[1] : '';
-
-        $remaining_words = array_slice($words, 2);
-        $remaining_string = implode(' ', $remaining_words);
+  <?php
+        $footer_logo_title = get_theme_mod('footer_title', 'Smoke-N-Wings <span class="text-[#F65600]"> BBQ </span> Competition');
 
         $footer_button_text = get_theme_mod('footer_button_title', 'Enter Competition');
         ?>
-        <!-- footer left -->
-        <div class="footer-text w-7/12">
-            <a href="<?php echo home_url();?>">
-            <h3 class="text-[#FFE4D5] font-bebas-pro text-[115px] font-bold leading-[102px] tracking-[2.3px] uppercase">
-                <?php echo  $first_word; ?> <span class="text-[#F65600]">
-                    <?php echo  $second_word; ?>
-                </span>
-                <?php echo  $remaining_string; ?>
 
+
+<footer class="w-full mx-auto pt-6 md:pt-8 lg:pt-10 2xl:pt-14 pb-3 sm:pt-5 sm:pb-4 lg:pb-6  2xl:pb-8  px-[2.5%] md:px-[3.5%] lg:px-[7.5%] 2xl:px-[8.68%] mt-3 sm:mt-5 md:mt-7 lg:mt-10 2xl:mt-[92px] bg-[#16396F]">
+
+    <!-- footer-content -->
+    <div class="footer-content mx-auto max-w-[1300px] flex flex-col md:flex-row items-center justify-start md:justify-between">
+
+        <!-- footer left -->
+        <div class="footer-text text-center md:text-start w-full md:w-8/12">
+            <a href="<?php echo home_url();?>">
+            <h3 class="text-[#FFE4D5] font-bebas-pro text-[50px] sm:text-[56px] md:text-[80px] lg:text-[90px] 2xl:text-[115px] font-bold leading-[58px] sm:leading-[62px] md:leading-[85px] xl:leading-[95px] 2xl:leading-[102px] tracking-[2.3px] uppercase">
+                <?php echo wp_kses_post($footer_logo_title); ?> 
             </h3>
             </a>
         </div>
         <!-- footer right -->
-        <div class="footer-right flex flex-col items-end w-5/12">
+        <div class="footer-right flex flex-col items-center pt-3.5 md:pt-0 md:items-end w-full md:w-4/12">
             <!-- footer button -->
             <div class="button">
                 <a href="<?php
@@ -37,14 +30,14 @@
                             $enter_link = '#';
                         }
                         echo $enter_link;
-                        ?>" class="inline-block w-[367px] h-[45px] flex-shrink-0 bg-[#F65600] text-white font-bebas-pro font-extrabold text-[20px] leading-[1] tracking-[0.4px] uppercase py-[13.99px] px-[48px] text-center">
+                        ?>" class="inline-block w-full 2xl:w-[367px] 2xl:h-[45px] flex-shrink-0 bg-[#F65600] text-white font-bebas-pro font-extrabold text-[20px] leading-[1] tracking-[0.4px] uppercase py-[13.99px] px-[48px] text-center">
                     <?php echo $footer_button_text; ?>
                 </a>
 
             </div>
 
             <!-- footer menu -->
-            <div class="foote-menu flex gap-24 pt-9">
+            <div class="foote-menu w-full flex items-center justify-between pt-9">
                 <nav>
                     <?php
                     wp_nav_menu(array(
@@ -73,9 +66,9 @@
 
     <!-- footer buttom -->
     <!-- divider and text -->
-    <div class="divider-text flex flex-col gap-5 pt-5 mx-auto">
+    <div class="divider-text -mx-14 flex flex-col gap-5 pt-5">
 
-        <div class=" ml-13 w-[1334px] h-[2px] bg-[#FFFFFF]">
+        <div class="mx-auto w-full scroll-px-5 max-w-[1400px] h-[2px] bg-[#FFFFFF]">
         </div>
 
         <p class="text-[#FFE4D5] font-jost text-[15px] font-normal leading-normal tracking-[0.3px] uppercase text-center">
