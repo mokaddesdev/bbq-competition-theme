@@ -1,5 +1,8 @@
 
-<section class="pt-[46.60px] mb-0.5 pb-6 w-[1440px] px-[126px] flex flex-col gap-[49px]">
+<section class="pt-[46.60px] mb-0.5 pb-6 w-full px-[2.5%] md:px-[3.5%] lg:px-[7.5%] 2xl:px-[8.68%]">
+
+<div class="container max-w-[1300px] flex flex-col gap-4 xl:gap-[49px]">
+
 <?php
 /**
  * Proper & clean loop for 
@@ -19,12 +22,12 @@ if ( $hav_query->have_posts() ) :
     while ( $hav_query->have_posts() ) :
         $hav_query->the_post();
         ?>
-        <article class="w-[1176px] h-[317px] flex flex-shrink-0 border border-[#E7E7E7] bg-white">
+        <article class="w-full xl:w-[1176px] xl:h-[317px] flex flex-col items-center md:flex-row flex-shrink-0 border border-[#E7E7E7] bg-white">
             <!-- left image -->
              <?php 
              if ( has_post_thumbnail() ) {
                 the_post_thumbnail( 'medium', array(
-                    'class' => 'w-[545px] h-[317px] flex-shrink-0 object-cover',
+                    'class' => 'w-full md:w-[545px] h-[317px] flex-shrink-0 object-cover',
                     'alt'   => esc_attr( get_the_title() ),
                 ) );
             }
@@ -46,7 +49,7 @@ if ( $hav_query->have_posts() ) :
     </div>
 
     <!--Second Row: Description -->
-    <h3 class="text-[#7C7C7C] font-jost text-[18px] font-normal leading-[120%] not-italic -pt-1 w-[470px]">
+    <h3 class="text-[#7C7C7C] font-jost text-[18px] font-normal leading-[120%] not-italic -pt-1 w-full xl:w-[470px]">
       <?php echo esc_html( the_content()); ?> 
     </h3>
 
@@ -64,4 +67,5 @@ else :
     echo '<p>No posts found.</p>';
 endif;
 ?>
+</div>
 </section>
