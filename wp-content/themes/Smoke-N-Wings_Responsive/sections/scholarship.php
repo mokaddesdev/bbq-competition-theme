@@ -1,9 +1,20 @@
 <?php
-$title   = get_theme_mod('featured_sponsor_title');
-$desc    = get_theme_mod('featured_sponsor_description');
-$btn_txt = get_theme_mod('featured_sponsor_button_text');
-$banner  = get_theme_mod('featured_sponsor_banner_text');
+$title   = get_theme_mod('featured_sponsor_title', 'BINGHAM MAYORS <span class="text-[#F65600]">SCHOLORSHIP</span>');
+
+$desc    = get_theme_mod('featured_sponsor_description', 'The Bingham County Mayors Scholarship committee is pleased to announce a scholarship for graduating high school seniors residing or attending any school in Bingham County who plan on continuing their education at any accredited college/university, including technical and vocational programs. The Bingham County Mayors Scholarship will be awarded under the direction of the Bingham County Mayors Scholarship Selection Committee.');
+
+$btn_txt = get_theme_mod('featured_sponsor_button_text', 'ENTER THE COMPETITION');
+
+$banner  = get_theme_mod('featured_sponsor_banner_text', 'In 2023, 46 scholarships were awarded to Bingham County high school seniors. A total of <span class="text-[#F65600]">$23,000 was awarded.</span>');
+
 $image   = get_theme_mod('featured_sponsor_image');
+
+$enter_page = get_page_by_path('enter');
+        if ($enter_page) {
+        $enter_link = get_permalink($enter_page);
+        } else {
+            $enter_link = '#';
+        }
 ?>
 
 <section class="relative w-[1440px] pl-[95px] pt-[147px] pb-[66px] pr-[40px] mx-auto py-5">
@@ -18,38 +29,30 @@ $image   = get_theme_mod('featured_sponsor_image');
             <!-- left side text -->
             <div class="relative about-left w-[624px] -mt-4 flex flex-col gap-3">
 
-                <h2 class="text-[#16396F] font-bebas-pro text-[60px] font-bold leading-[81px] tracking-[1.56px] uppercase">
+                <h2 class="body-heading">
+
                     <?php
-                    echo ! empty($title)
-                        ? wp_kses_post($title)
-                        : 'BINGHAM MAYORS <span class="text-[#F65600]">SCHOLORSHIP</span>';
+                      if(!empty($title)){
+                        echo wp_kses_post($title);
+                      }
                     ?>
                 </h2>
 
-                <p class="w-[624px] text-black font-jost text-[18px] font-normal leading-normal tracking-[0.36px]">
+                <p class="w-[624px] body-text">
                     <?php
-                    echo ! empty($desc)
-                        ? wp_kses_post($desc)
-                        : 'The Bingham County Mayors Scholarship committee is pleased to announce a scholarship for graduating high school seniors residing or attending any school in Bingham County who plan on continuing their education at any accredited college/university, including technical and vocational programs. The Bingham County Mayors Scholarship will be awarded under the direction of the Bingham County Mayors Scholarship Selection Committee.';
+                    if(!empty($desc)){
+                        echo wp_kses_post($desc);
+                    }
                     ?>
                 </p>
 
                 <div class="button pt-7">
-                    <a href="<?php
-                     $enter_page = get_page_by_path('enter');
-                        if ($enter_page) {
-                            $enter_link = get_permalink($enter_page);
-                        } else {
-                            $enter_link = '#';
-                        }
-                        echo $enter_link;
-                        ?>"
-                       class="red-btn">
+                    <a href=" <?php echo $enter_link; ?>" class="red-btn">
                        <span>
                         <?php
-                        echo ! empty($btn_txt)
-                            ? esc_html($btn_txt)
-                            : 'ENTER THE COMPETITION';
+                        if(!empty($btn_txt)){
+                            echo esc_html($btn_txt);
+                        }
                         ?>
                         </span>
                     </a>
@@ -61,9 +64,10 @@ $image   = get_theme_mod('featured_sponsor_image');
                     </svg>
                     <h2 class="text-[#16396F] absolute top-5 left-11 font-bebas text-[24px] font-normal leading-[30.233px] max-w-[497px]">
                         <?php
-                        echo ! empty($banner)
-                            ? wp_kses_post($banner)
-                            : 'In 2023, 46 scholarships were awarded to Bingham County high school seniors. A total of <span class="text-[#F65600]">$23,000 was awarded.</span>';
+                        if(!empty($banner)){
+                             echo wp_kses_post($banner);
+                        }
+                   
                         ?>
                     </h2>
                 </div>

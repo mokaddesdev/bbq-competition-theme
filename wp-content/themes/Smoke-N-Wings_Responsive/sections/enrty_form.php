@@ -20,7 +20,7 @@
 
                 <div class="relative sticky top-1 right-0 -mt-2 w-full flex flex-col gap-3 items-center md:items-start">
                     <!-- form heading -->
-                    <h2 class="text-[#16396F] font-bebas text-[36px] sm:text-[40px] md:text-[46px] lg:text-[50px] 2xl:text-[60px] font-normal leading-[44px] md:leading-[55px] xl:leading-[81px] tracking-[1.2px] uppercase">
+                    <h2 class="body-heading">
                         <?php
                         if (! empty($title)) {
                             echo wp_kses_post($title);
@@ -30,7 +30,7 @@
                         ?>
                     </h2>
 
-                    <p class="text-black font-jost text-center md:text-start text-base md:text-[18px] font-normal leading-[22px] md:leading-normal tracking-[0.36px] pt-0.5">
+                    <p class="body-text text-center md:text-start  pt-0.5">
                         <?php
                         if (! empty($desc)) {
                             echo wp_kses_post($desc);

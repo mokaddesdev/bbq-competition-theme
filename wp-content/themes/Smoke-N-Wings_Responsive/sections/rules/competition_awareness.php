@@ -31,7 +31,7 @@
   <div class="relative about-left py-8 pl-9 w-[600px] flex flex-col gap-6">
 
     <!-- heading one line -->
-    <h2 class="text-[#16396F] font-bebas-pro text-[60px] font-bold leading-[81px] tracking-[1.56px] uppercase whitespace-nowrap">
+    <h2 class="body-heading whitespace-nowrap">
       <?php 
       echo ! empty($title) ?
        wp_kses_post($title)
@@ -41,15 +41,15 @@
     </h2>
 
     <!-- paragraph -->
-    <p class="w-[570px] text-black font-jost pt-4 text-[18px] font-normal leading-normal tracking-[0.36px]">
+    <p class="w-[570px] body-text pt-4  ">
       <?php 
       echo ! empty($desc1) ?
        wp_kses_post($desc1)
         : 'Fire lanes and emergency access shall be maintained at all times.Ashes and grease must be disposed of in provided containers located close to the cook sites. Team site will be left with no garbage, ashes, debris or liquid/grease spills. If site is not left in a Clean manner the city will clean the site and bill the team for the labor involved.'
       ?>
-     
+
       </p>
-      <p class="w-[570px] text-black font-jost -mt-1.5 text-[18px] font-normal leading-normal tracking-[0.36px]">
+      <p class="w-[570px] body-text -mt-1.5">
      <?php 
       echo ! empty($desc2) ?
        wp_kses_post($desc2)

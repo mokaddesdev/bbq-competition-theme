@@ -9,7 +9,7 @@
     <div class="relative z-20 flex gap-16 w-full">
             <!-- left side text -->
             <div class="relative about-left pt-16 w-[569px] flex flex-col gap-5">
-                <h2 class="text-[#16396F] font-bebas text-[60px] font-normal leading-[60px] tracking-[1.2px] uppercase">
+                <h2 class="body-heading">
                   <?php echo !empty($title) ?
                    $title : ' <span class="text-[#F65600]">The items </span> they are looking for are'?>
                 </h2>

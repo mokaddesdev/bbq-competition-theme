@@ -21,11 +21,11 @@
         <!-- heading -->
         <div class="heading flex items-center justify-center flex-col gap-4">
 
-            <h2 class="text-[#16396F] -mt-[2.66px] text-center font-bebas-pro text-[60px] font-normal leading-[81px] tracking-[1.2px] uppercase">
+            <h2 class="body-heading -mt-[2.66px] text-center">
                 <?php echo wp_kses_post($title); ?>
             </h2>
 
-            <p class="text-black font-jost text-[18px] font-normal leading-normal tracking-[0.36px] w-[740px] text-center">
+            <p class="body-text w-[740px] text-center">
                  <?php echo wp_kses_post($desc); ?>
             </p>
         </div>

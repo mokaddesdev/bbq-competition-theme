@@ -39,12 +39,12 @@ $image   = get_theme_mod(
   <div class="relative about-left py-7 pl-8 w-[600px] flex flex-col gap-[38px]">
 
     <!-- heading one line -->
-    <h2 class="text-[#16396F] font-bebas-pro text-[60px] font-bold leading-[81px] tracking-[1.56px] uppercase whitespace-nowrap">
+    <h2 class="body-heading whitespace-nowrap">
         <?php echo wp_kses_post($title);?>
     </h2>
 
     <!-- paragraph -->
-    <p class="w-[570px] text-black font-jost text-[18px] font-normal leading-normal tracking-[0.36px]">
+    <p class="w-[570px] body-text">
       <?php echo wp_kses_post($desc);?>
     </p>
 

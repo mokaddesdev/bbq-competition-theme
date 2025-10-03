@@ -1,11 +1,13 @@
+    <?php 
+       $sponsor_title = get_theme_mod('sponsor_page_heading_title', 'our featured <span class="text-[#F65600]"> sponsors </span>');
+    ?>
+
+
 <section class="w-[1440px] pt-[115px] pb-[34px] px-[84px] flex flex-col items-center gap-16">
     <!-- heading -->
     <div>
-       <?php
-        $sponsor_title = get_theme_mod('sponsor_page_heading_title', 'our featured <span class="text-[#F65600]"> sponsors </span>');
-        ?>
          <?php if ($sponsor_title) : ?>
-        <h3 class="text-[#16396F] text-center font-bebas text-[60px] font-normal leading-[81px] tracking-[1.2px] uppercase self-stretch">
+        <h3 class="body-heading text-center">
             <?php echo wp_kses_post($sponsor_title); ?>
         </h3>
         <?php endif; ?>

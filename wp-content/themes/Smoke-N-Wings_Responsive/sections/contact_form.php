@@ -11,7 +11,7 @@
         <div class="flex gap-[10px]">
             <!-- left side text -->
             <div class="relative about-left w-[624px] -mt-4 flex flex-col gap-3">
-                <h2 class="text-[#16396F] pl-0.5 font-bebas text-[60px] font-normal leading-[81px] tracking-[1.2px] uppercase">
+                <h2 class="body-heading">
                     <?php
                     $left_title = get_theme_mod("contact_form_title");
                     if ( ! empty( $left_title ) ) :

@@ -14,7 +14,7 @@
 
     <!-- section heading -->
     <div class="heading flex justify-between flex-col items-center gap-4">
-        <h2 class="text-[#16396F] text-center font-['Bebas_Neue'] text-[60px] font-normal leading-[81px] tracking-[1.2px] uppercase">
+        <h2 class="body-heading">
              <?php
                     echo ! empty($title)
                         ? wp_kses_post($title)
@@ -22,7 +22,7 @@
                     ?>
             
         </h2> 
-        <p class="text-black text-center font-jost text-[18px] font-normal leading-normal tracking-[0.36px]">
+        <p class="body-text text-center">
              <?php
                     echo ! empty($desc)
                         ? wp_kses_post($desc)
@@ -68,7 +68,7 @@
                             ?>
                         </h3>
                     </div>
-                    <h3 class="text-[#7C7C7C] w-[394px] font-jost text-[18px] font-normal leading-[120%]">
+                    <h3 class="body-text w-[394px]">
                         <?php echo wp_kses_post(get_the_content()); ?>
                     </h3>
 

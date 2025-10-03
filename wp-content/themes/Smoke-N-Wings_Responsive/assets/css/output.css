@@ -445,9 +445,6 @@
   .-mt-\[2\.66px\] {
     margin-top: calc(2.66px * -1);
   }
-  .-mt-\[7\.93px\] {
-    margin-top: calc(7.93px * -1);
-  }
   .mt-1 {
     margin-top: calc(var(--spacing) * 1);
   }
@@ -1492,9 +1489,6 @@
   .text-right {
     text-align: right;
   }
-  .font-\[\'Bebas_Neue\'\] {
-    font-family: 'Bebas Neue';
-  }
   .font-bebas {
     font-family: var(--font-bebas);
   }
@@ -1602,10 +1596,6 @@
   .leading-\[22\.4px\] {
     --tw-leading: 22.4px;
     line-height: 22.4px;
-  }
-  .leading-\[22px\] {
-    --tw-leading: 22px;
-    line-height: 22px;
   }
   .leading-\[25\.2px\] {
     --tw-leading: 25.2px;
@@ -2251,11 +2241,6 @@
       font-size: 15px;
     }
   }
-  .md\:text-\[18px\] {
-    @media (width >= 48rem) {
-      font-size: 18px;
-    }
-  }
   .md\:text-\[24px\] {
     @media (width >= 48rem) {
       font-size: 24px;
@@ -2291,12 +2276,6 @@
     @media (width >= 48rem) {
       --tw-leading: 85px;
       line-height: 85px;
-    }
-  }
-  .md\:leading-normal {
-    @media (width >= 48rem) {
-      --tw-leading: var(--leading-normal);
-      line-height: var(--leading-normal);
     }
   }
   .md\:tracking-\[0\.96px\] {
@@ -2585,6 +2564,31 @@ ul, li {
   --tw-tracking: 0.96px;
   letter-spacing: 0.96px;
   color: var(--color-white);
+  text-transform: uppercase;
+}
+.body-text {
+  align-self: stretch;
+  font-family: var(--font-jost);
+  font-size: 18px;
+  --tw-leading: var(--leading-normal);
+  line-height: var(--leading-normal);
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
+  --tw-tracking: 0.36px;
+  letter-spacing: 0.36px;
+  color: var(--color-black);
+}
+.body-heading {
+  text-align: center;
+  font-family: var(--font-bebas);
+  font-size: 60px;
+  --tw-leading: 81px;
+  line-height: 81px;
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
+  --tw-tracking: 1.2px;
+  letter-spacing: 1.2px;
+  color: #16396F;
   text-transform: uppercase;
 }
 .header-footer-btn {

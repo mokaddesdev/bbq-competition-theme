@@ -10,7 +10,7 @@
 
             <!-- left side text -->
             <div class="relative  w-[624px] flex pt-5 flex-col gap-8">
-                <h2 class="text-[#16396F] font-bebas text-[60px] font-normal leading-[81px] tracking-[1.2px] uppercase leading-trim">
+                <h2 class="body-heading leading-trim">
                      <?php
                     echo ! empty($title)
                         ? wp_kses_post($title)
@@ -19,7 +19,7 @@
                    
                 </h2>
 
-                <p class="w-[624px] text-black font-jost text-[18px] font-normal leading-normal tracking-[0.36px]">
+                <p class="w-[624px] body-text">
                      <?php
                     echo ! empty($desc)
                         ? wp_kses_post($desc)

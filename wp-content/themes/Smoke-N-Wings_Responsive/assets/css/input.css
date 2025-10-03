@@ -46,7 +46,18 @@ ul, li {
    @apply text-[48px] font-bebas-pro font-extrabold uppercase tracking-[0.96px] text-white leading-[1];
 }
 
-/* Header Footer Button */
+.body-text{
+    @apply text-[18px] text-black font-jost font-normal leading-normal tracking-[0.36px] self-stretch;
+
+}
+
+.body-heading{
+    @apply text-[#16396F] text-center font-bebas text-[60px] font-normal leading-[81px] tracking-[1.2px] uppercase;
+
+}
+/* ==========================
+ Reset Button design
+ ============================== */
 
 .header-footer-btn{
     @apply inline-block text-center text-white text-[18px] md:text-[20px] font-bold leading-normal tracking-[0.4px] uppercase font-bebas-pro py-2.5 px-[34px] bg-[#F65600] border-[1.08px] border-[#F65600] relative overflow-hidden transition-all duration-500 ease-out cursor-pointer;
