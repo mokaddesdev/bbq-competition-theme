@@ -11,7 +11,7 @@
 <section class="relative w-[1440px] mx-auto">
 
     <!-- Background huge text layer -->
-    <div class="absolute top-[48px] left-[115px] z-10 opacity-100">
+    <div class="absolute top-[48px] left-[115px] z-10 animate-pulse">
         <?php get_template_part("svg/smoke_in_wings_svg"); ?>
     </div>
 

@@ -3,7 +3,7 @@
     ?>
 
 
-<section class="w-[1440px] pt-[115px] pb-[34px] px-[84px] flex flex-col items-center gap-16">
+<section class="w-full pt-10 sm:pt-13 md:pt-16 lg:pt-20 2xl:pt-[115px] pb-[34px] px-[5.83%] flex flex-col items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12 2xl:gap-16">
     <!-- heading -->
     <div>
          <?php if ($sponsor_title) : ?>
@@ -14,7 +14,7 @@
     </div>
 
     <!-- images gallery -->
-    <div class="flex flex-wrap justify-center gap-x-[67px] gap-y-[44px]">
+    <div class="flex flex-wrap justify-center gap-x-5 gap-y-4 md:gap-x-8 md:gap-y-7 xl:gap-x-[67px] xl:gap-y-[44px]">
         <?php
         $latest_gallery = new WP_Query([
             'post_type'      => 'sponsor',
@@ -31,7 +31,7 @@
             if (!empty($galleries)) {
                 foreach ($galleries as $gallery) {
                     foreach ($gallery['src'] as $img_url) {
-                        echo ' <div class="flex w-[313px] h-[247px] p-[66px] flex-col justify-center items-center gap-[10px] border-[5px] border-[#FFE4D5] bg-white">';
+                        echo ' <div class="flex w-full sm:w-[313px] lg:h-[247px] p-[60px] md:p-[56px] xl:p-[66px] flex-col justify-center items-center gap-[10px] border-[5px] border-[#FFE4D5] bg-white">';
                         echo '<img src="' . esc_url($img_url) . '" alt="' . esc_attr(get_the_title()) . '" class="w-full h-full object-contain">';
                         echo '</div>';
                     }

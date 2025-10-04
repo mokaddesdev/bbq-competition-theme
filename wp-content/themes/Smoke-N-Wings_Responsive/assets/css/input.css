@@ -42,17 +42,14 @@ ul, li {
    @apply text-[247px] font-bebas-pro font-extrabold uppercase text-center leading-[1] text-[rgba(248,184,149,0.45)] max-w-[1269px] mx-auto;
 }
 
-.heading-text{
-   @apply text-[48px] font-bebas-pro font-extrabold uppercase tracking-[0.96px] text-white leading-[1];
-}
 
 .body-text{
-    @apply text-[18px] text-black font-jost font-normal leading-normal tracking-[0.36px] self-stretch;
+    @apply text-base md:text-[18px] text-black font-jost font-normal leading-normal tracking-[0.36px] self-stretch;
 
 }
 
 .body-heading{
-    @apply text-[#16396F] text-center font-bebas text-[60px] font-normal leading-[81px] tracking-[1.2px] uppercase;
+    @apply text-[#16396F] text-center font-bebas text-[40px] sm:text-[44px] md:text-[48px] lg:text-[52px] xl:text-[60px] font-normal leading-[46px] md:leading-[61px] xl:leading-[81px] tracking-[1.2px] uppercase;
 
 }
 /* ==========================
@@ -60,16 +57,18 @@ ul, li {
  ============================== */
 
 .header-footer-btn{
-    @apply inline-block text-center text-white text-[18px] md:text-[20px] font-bold leading-normal tracking-[0.4px] uppercase font-bebas-pro py-2.5 px-[34px] bg-[#F65600] border-[1.08px] border-[#F65600] relative overflow-hidden transition-all duration-500 ease-out cursor-pointer;
+    @apply inline-block text-center text-white text-[18px] md:text-[20px] font-bold leading-normal tracking-[0.4px] uppercase font-bebas-pro py-2 px-5 md:py-2.5 md:px-[34px] bg-[#F65600] border-[1.08px] border-[#F65600] relative overflow-hidden transition-all duration-500 ease-out cursor-pointer;
 }
 
-.header-footer-btn::before {
+.header-footer-btn::before{
     content: "";
     @apply absolute left-0 bottom-0 w-full h-0 bg-[#16396F] transition-all duration-500 ease-out cursor-pointer;
     z-index: 0;
 }
 
-.header-footer-btn:hover::before {
+.header-footer-btn:hover::before,
+.header-footer-btn:active::before,
+.header-footer-btn:focus::before {
     @apply h-full;
 }
 
@@ -82,38 +81,23 @@ ul, li {
     @apply text-[18px] md:text-[20px] font-bold leading-normal tracking-[0.4px] uppercase font-bebas-pro;
 }
 
-/* Blue Button */
-.blue-btn{
-    @apply inline-block text-center text-[#FFFFFF] text-[18px] sm:text-[20px] lg:text-[24px] font-normal leading-[30.233px] font-bebas py-[15.22px] px-[30.50px] w-[273px] border-[1.08px] border-[#16396F] bg-[#16396F] relative overflow-hidden transition-all duration-500 ease-out;
-}
-
-.blue-btn::before {
-    content: "";
-    @apply absolute top-0 left-0 w-full h-0 bg-[#F65600] transition-all duration-500 ease-out;
-    z-index: 0;
-}
-
-.blue-btn:hover::before {
-    @apply h-full;
-}
-
-.blue-btn span {
-    @apply relative z-10 text-white;
-}
 
 
 /* Blue Button */
 .blue-btn{
-    @apply inline-block text-center text-[#FFFFFF] text-[18px] sm:text-[20px] lg:text-[24px] font-normal leading-[30.233px] font-bebas py-[15.22px] px-[30.50px] w-[273px] border-[1.08px] border-[#16396F] bg-[#16396F] relative overflow-hidden transition-all duration-500 ease-out cursor-pointer;
+    @apply inline-block text-center text-[#FFFFFF] text-[18px] sm:text-[20px] lg:text-[24px] font-normal leading-[30.233px] font-bebas py-2 px-5 md:py-[15.22px] md:px-[30.50px] w-full xl:w-[273px] border-[1.08px] border-[#16396F] bg-[#16396F] relative overflow-hidden transition-all duration-500 ease-out cursor-pointer;
 }
 
-.blue-btn::before {
+
+.blue-btn::before{
     content: "";
     @apply absolute top-0 left-0 w-full h-0 bg-[#F65600] transition-all duration-500 ease-out cursor-pointer;
     z-index: 0;
 }
 
-.blue-btn:hover::before {
+.blue-btn:hover::before,
+.blue-btn:active::before,
+.blue-btn:focus::before {
     @apply h-full;
 }
 
@@ -121,18 +105,21 @@ ul, li {
     @apply relative z-10 text-white;
 }
 
+
 /* Red Button */
 .red-btn{
-    @apply inline-block text-center text-[#FFFFFF] text-[18px] sm:text-[20px] lg:text-[24px] font-normal leading-[30.233px] font-bebas py-[15.22px] px-[30.50px] w-[273px] border-[1.08px] border-[#F65600] bg-[#F65600] relative overflow-hidden transition-all duration-500 ease-out cursor-pointer;
+    @apply inline-block text-center text-[#FFFFFF] text-[18px] sm:text-[20px] lg:text-[24px] font-normal leading-[30.233px] font-bebas py-2 px-5 md:py-[15.22px] md:px-[30.50px] w-full xl:w-[273px] border-[1.08px] border-[#F65600] bg-[#F65600] relative overflow-hidden transition-all duration-500 ease-out cursor-pointer;
 }
 
-.red-btn::before {
+.red-btn::before{
     content: "";
     @apply absolute top-0 left-0 w-full h-0 bg-[#16396F] transition-all duration-500 ease-out cursor-pointer;
     z-index: 0;
 }
 
-.red-btn:hover::before {
+.red-btn:hover::before,
+.red-btn:active::before,
+.red-btn:focus::before {
     @apply h-full;
 }
 

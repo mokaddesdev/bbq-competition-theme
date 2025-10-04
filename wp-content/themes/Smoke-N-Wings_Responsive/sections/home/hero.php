@@ -10,20 +10,20 @@ $hero_button_text_right = get_theme_mod('hero_button_text_right', 'Check Out The
     <div class="absolute inset-0 bg-[#F8B895] opacity-[0.75] z-0"></div>
 
     <!-- Background huge text layer -->
-    <div class="absolute inset-0 flex flex-col gap-0 justify-between items-center z-10 opacity-100">
-        <h1 class="text-[247px] font-bebas-pro font-extrabold uppercase leading-[0.85] text-[rgba(248,184,149,0.45)] text-center max-w-[1269px]">
+    <div class="absolute inset-0 flex flex-col gap-0 justify-between items-center z-10 opacity-100 animate-pulse text-[247px] font-bebas-pro font-extrabold uppercase leading-[0.85] text-[rgba(248,184,149,0.45)] text-center max-w-[1269px]">
+        <h1 class="">
             Smoke-N-Wings
         </h1>
-        <h1 class="text-[247px] font-bebas-pro font-extrabold uppercase leading-[0.65] text-[rgba(248,184,149,0.45)] text-center max-w-[1269px]">
+        <h1 class="">
             Idaho State bbq
         </h1>
-        <h1 class="text-[311px] font-bebas-pro font-extrabold uppercase leading-[0.85] text-[rgba(248,184,149,0.45)] text-center max-w-[1269px]">
+        <h1 class="">
             Competition
         </h1>
     </div>
 
     <!-- Foreground content layer -->
-    <div class="relative z-20 flex h-[600px] md:h-[700px] lg:h-[800px]">
+    <div class="relative z-20 flex h-[600px] md:h-[700px] lg:h-[800px] text-[48px] font-bebas-pro font-extrabold uppercase tracking-[0.96px] text-white leading-[1]">
         <!-- Left button -->
           <a href="<?php
             $enter_page = get_page_by_path('enter');
@@ -34,16 +34,17 @@ $hero_button_text_right = get_theme_mod('hero_button_text_right', 'Check Out The
                 }
                 echo $enter_link;
                 ?>">
-           <div class="absolute top-[43%] left-0 text-center z-10">
+           <div class="absolute md:w-[35.7%] w-[80%] top-[43%] left-0 text-center z-10">
                             <!-- clip-path approach -->
-                <div class="relative w-full max-w-[514px] mx-auto z-30">
-                <div
-                    class="w-full h-20 sm:h-22 md:h-24 lg:h-28"
-                    style="background:#F65600; clip-path: polygon(0% 0%, 100% 0%, 95.57% 100%, 0% 100%);">
-                </div>
+
+                <div class="w-[100%] h-[88px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" viewBox="0 0 514 88" fill="none" class="mx-auto">
+                        <path d="M0 0H514L490.703 88H0V0Z" fill="#F65600"/>
+                        </svg>
+                    
                 </div>
 
-                <p class="absolute inset-0 flex pt-2.5 items-center justify-center heading-text">
+                <p class="absolute inset-0 flex pt-2.5 items-center justify-center ">
                     <?php echo esc_html($hero_button_text_left); ?>
                 </p>
             </div>
@@ -51,11 +52,15 @@ $hero_button_text_right = get_theme_mod('hero_button_text_right', 'Check Out The
 
         <!-- Right button -->
         <a href="<?php echo get_permalink(get_page_by_path('rules')); ?>">
-            <div class="absolute top-[43%] right-0 transform text-center z-10">
-                <svg xmlns="http://www.w3.org/2000/svg" width="514" height="88" viewBox="0 0 514 88" fill="none">
+            <div class="absolute top-[60%] w-[100%] h-[88px] md:top-[43%] right-0 transform text-center z-10">
+
+            <!-- shap -->
+             <div class="shap w-[80%] md:w-[35.7%] ml-auto md:mr-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-auto" viewBox="0 0 514 88" fill="none">
                     <path d="M514 88H0L23.2974 0H514V88Z" fill="#591419"/>
                 </svg>
-                <p class="absolute inset-0 flex pt-2.5 pl-7 items-center justify-center heading-text">
+             </div>
+                <p class="absolute inset-0 flex pt-2.5 pl-7 items-center justify-center">
                     <?php echo esc_html($hero_button_text_right); ?>
                 </p>
             </div>
