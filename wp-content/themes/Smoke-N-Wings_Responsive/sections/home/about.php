@@ -1,78 +1,84 @@
 <?php
-// Get customizer values with default fallback
 $about_title = get_theme_mod('about_title', 'Join us for the <span class="text-[#F65600]"> 2025 Smoke-N-Wings </span> BBQ Competition!');
-
 $about_description = get_theme_mod('about_description', 'Teams from all around the area will compete in this KCBS sanctioned, Idaho State Competition. Teams will cook chicken, ribs, pork and brisket. The winning team will be crowned the SMOKE-N-WINGS winner and the Idaho State Champions and be eligible for the American Royal and the Jack Daniels World Championship.');
-
 $about_button_text = get_theme_mod('about_button_text', 'Enter the competition');
-
 $about_left_image = get_theme_mod('about_left_image', get_template_directory_uri() . '/assets/images/about.png');
-
 ?>
 
-<section class="relative w-[1440px] mx-auto">
+<section class="relative w-full mx-auto 
+  px-[4%] sm:px-[5%] md:px-[6%] lg:px-[7%] xl:px-[8.5%] 
+  pt-[60px] sm:pt-[80px] md:pt-[90px] lg:pt-[97px]">
 
-    <!-- Background huge text layer -->
-    <div class="absolute top-[42px] left-[45px] z-10 opacity-100">
-        <?php get_template_part("svg/smoke_in_wings_svg");?>
+  <!-- Background huge text layer -->
+  <div class="absolute top-[25px] sm:top-[35px] md:top-[42px] left-[4%] sm:left-[5%] z-10 opacity-100">
+      <?php get_template_part("svg/smoke_in_wings_svg");?>
+  </div>
+
+  <!-- Foreground content -->
+  <div class="relative z-20 flex flex-col md:flex-row gap-8 sm:gap-10 md:gap-12 lg:gap-14 w-full max-w-[1300px] mx-auto">
+
+    <!-- Left text side -->
+    <div class="about-left w-full md:w-[50%] lg:w-[47%] flex flex-col 
+                items-center md:items-start text-center md:text-left 
+                gap-4 sm:gap-6 md:gap-7 lg:gap-8 py-[10px]">
+
+        <?php if(!empty($about_title)): ?>
+        <h2 class="text-[#16396F] 
+                   font-bebas-pro font-bold uppercase
+                   text-[48px] sm:text-[60px] md:text-[70px] lg:text-[78px]
+                   leading-[1.1] tracking-[1.2px] max-w-[95%] sm:max-w-[550px]">
+            <?php echo wp_kses_post($about_title); ?>
+        </h2>
+        <?php endif; ?>
+
+        <?php if(!empty($about_description)): ?>
+        <p class="text-black font-jost font-normal 
+                  text-[16px] sm:text-[18px] md:text-[19px] 
+                  leading-relaxed tracking-[0.3px] 
+                  max-w-[95%] sm:max-w-[533px]">
+            <?php echo wp_kses_post(nl2br($about_description)); ?>
+        </p>
+        <?php endif; ?>
     </div>
 
-    <!-- Foreground content layer -->
-    <div class="relative z-20 flex gap-12 px-[125px] pt-[97px] w-full">
-        <!-- left side text -->
-        <div class="about-left py-[13px] w-[549px] flex flex-col items-start gap-5">
-             <?php if(!empty($about_title)): ?>
-            <h2 class="text-[#16396F] max-w-[550px] font-bebas-pro text-[78px] font-bold leading-[81px] tracking-[1.56px] uppercase">
-                 <?php echo wp_kses_post($about_title); ?>
-                </h2>
-                <?php endif; ?>
+    <!-- Right image + SVG -->
+    <div class="relative w-full md:w-[50%] lg:w-[53%] flex justify-center md:justify-end">
+      <div class="relative w-[90%] sm:w-[85%] md:w-[80%] lg:w-[595px] aspect-[594/495]">
 
-            <?php if(!empty($about_description)): ?>
-            <p class="text-black max-w-[533px] font-jost text-[19px] font-normal leading-normal tracking-[0.38px]">
-                <?php echo wp_kses_post(nl2br($about_description)); ?>
-            </p>
-            <?php endif; ?>
+        <!-- background SVG shape -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 594 495" fill="none" class="w-full h-full">
+          <path d="M95 495H593.5V0H0L95 495Z" fill="#591419"/>
+        </svg>
+
+        <!-- main image -->
+        <?php if(!empty($about_left_image)): ?>
+        <div class="absolute -top-[1.5%] -left-[1.5%] w-[103%] h-[103%]">
+          <img src="<?php echo esc_url($about_left_image); ?>" 
+               alt="about image" 
+               class="w-full h-full object-contain">
         </div>
+        <?php endif; ?>
 
-        <!-- right side image with SVG overlay -->
-        <div class="relative w-[595px]">
-            <div class="relative w-full h-[495px]">
-                <!-- svg -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="594" height="495" viewBox="0 0 594 495" fill="none">
-                    <path d="M95 495H593.5V0H0L95 495Z" fill="#591419"/>
-                </svg>
+        <!-- button shape -->
+        <a href="<?php
+            $enter_page = get_page_by_path('enter');
+            echo $enter_page ? esc_url(get_permalink($enter_page)) : '#';
+        ?>" class="absolute bottom-0 left-0 w-full">
 
-                <?php if(!empty($about_left_image)): ?>
-                <div class="absolute -top-3 -left-3 -mr-4">
-                    <img src="<?php echo esc_url($about_left_image); ?>"
-                         alt="about image"
-                         class="w-[618px] h-[515px]">
-                </div>
-                <?php endif; ?>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 594 89" fill="none" class="w-full h-auto">
+            <path d="M593.5 89H0L17.6895 0H593.5V89Z" fill="#16396F"/>
+          </svg>
 
-                <!-- SVG shape and button text -->
-           <a href="<?php
-              $enter_page = get_page_by_path('enter');
-                if ($enter_page) {
-                    $enter_link = get_permalink($enter_page);
-                } else {
-                    $enter_link = '#';
-                }
-                echo $enter_link;
-                ?>">
-                <div class="absolute bottom-0 left-0 w-[594px] z-10">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="594" height="89" viewBox="0 0 594 89" fill="none">
-                        <path d="M593.5 89H0L17.6895 0H593.5V89Z" fill="#16396F"/>
-                    </svg>
-
-                    <?php if(!empty($about_button_text)): ?>
-                    <p class="absolute inset-0 flex items-center justify-center text-white font-bebas-pro text-[55px] font-bold tracking-[1.1px] pt-2.5 pl-4 uppercase z-20">
-                        <?php echo esc_html($about_button_text); ?>
-                    </p>
-                    <?php endif; ?>
-                </div>
-              </a>
-            </div>
-        </div>
+          <?php if(!empty($about_button_text)): ?>
+          <p class="absolute inset-0 flex items-center justify-center 
+                    text-white font-bebas-pro font-bold uppercase 
+                    text-[30px] sm:text-[38px] md:text-[45px] lg:text-[50px] xl:text-[55px]
+                    tracking-[1.1px] pt-1 sm:pt-2.5 pl-2 sm:pl-4">
+            <?php echo esc_html($about_button_text); ?>
+          </p>
+          <?php endif; ?>
+        </a>
+      </div>
     </div>
+  </div>
 </section>
