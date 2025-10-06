@@ -15,7 +15,7 @@
     </div>
 
     <!-- Foreground content layer -->
-    <div class="relative z-20 px-[125px] pt-[95px] w-full">
+    <div class="relative z-20 px-[125px] pt-[98px] w-full">
 
         <!-- heading -->
         <div class="heading flex items-center justify-center flex-col gap-4">

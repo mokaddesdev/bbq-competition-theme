@@ -39,9 +39,9 @@
         <!-- right side image with SVG overlay -->
         <div class="relative  w-[593px]">
             <div class="relative w-full h-[495px]">
-                <div class="-ml-5">
+                <div class="-ml-5 w-[594px] h-auto">
                 <!-- svg -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="594" height="495" viewBox="0 0 594 495" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-auto" viewBox="0 0 594 495" fill="none">
                     <path d="M95 495H593.5V0H0L95 495Z" fill="#591419"/>
                 </svg> 
                 </div>

@@ -37,24 +37,31 @@
             </div>
 
         <!-- right side image with SVG overlay -->
-        <div class="relative  w-[49.83%]">
-            <div class="relative w-full h-[495px]">
-                <div class="-ml-5">
-                <!-- svg -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="594" height="495" viewBox="0 0 594 495" fill="none">
-                    <path d="M95 495H593.5V0H0L95 495Z" fill="#591419"/>
-                </svg> 
-                </div>
+      <!-- right side image with SVG overlay -->
+<div class="relative w-full md:w-[48.5%] mx-auto">
+  <div class="relative w-full h-[400px] sm:h-[350px] md:h-[400px] lg:h-[450px]">
+    <!-- SVG Background -->
+    <div class="w-full h-full mt-6">
+      <svg xmlns="http://www.w3.org/2000/svg" 
+           class="w-full h-full" 
+           viewBox="0 0 594 495" 
+           fill="none" 
+           preserveAspectRatio="xMidYMid meet">
+        <path d="M95 495H593.5V0H0L95 495Z" fill="#591419"/>
+      </svg>
+    </div>
 
-               <div class="absolute -top-3 -left-9 -mr-3">
-                <img src="<?php echo !empty($image) ? $image : get_template_directory_uri() . '/assets/images/rule1.png'; ?>"
-                    alt="<?php echo esc_attr($title)?>"
-                    class=" w-full lg;w-[622px] h-auto lg:h-[519px]">
-                </div>
+    <!-- Image Layer -->
+    <div class="absolute -top-1 left-0 w-full h-full flex justify-center items-center">
+      <img 
+        src="<?php echo !empty($image) ? $image : get_template_directory_uri() . '/assets/images/rule1.png'; ?>"
+        alt="<?php echo esc_attr($title)?>"
+        class="w-full h-full -mb-3 max-w-[650px] object-contain top-0 sm:-top-10 md:-top-3 md:-left-9 relative"
+      />
+    </div>
+  </div>
+</div>
 
-            </div>
-        </div>
-        </div>
     </div>
 
 </section>

@@ -14,7 +14,7 @@
 <div class="header-container mx-auto max-w-[1300px] flex items-center justify-between relative">
 
     <!-- logo -->
-    <div class="logo w-[160px] h-[75px] sm:w-[150px] sm:h-[75px] lg:w-[210px] lg:h-[105px]">
+    <div class="logo w-[160px] h-[75px] sm:w-[150px] sm:h-[75px] md:w-[140px] md:h-[70px] lg:w-[210px] lg:h-[105px]">
         <a href="<?php echo home_url(); ?>" class="text-white hover:underline">
             <img 
                 src="<?php echo esc_url( get_theme_mod(
@@ -28,12 +28,12 @@
     </div>
 
     <!-- menu for desktop -->
-    <nav class="flex items-center gap-4 xl:gap-8 hidden md:flex">
+    <nav class="flex items-center gap-3 lg:gap-5 xl:gap-8 hidden md:flex">
         <?php
         wp_nav_menu([
             'theme_location' => 'smokeWings_header_menu',
             'container'      => false,
-            'menu_class'     => 'pt-1.5 flex items-center gap-3 lg:gap-6 xl:gap-[31px] text-black menu-text',
+            'menu_class'     => 'pt-1.5 flex items-center gap-[9px] lg:gap-3.5 xl:gap-[31px] text-black menu-text',
             'fallback_cb'    => false,
         ]);
         ?>
