@@ -7,8 +7,9 @@
 
 <section class="relative w-full mx-auto px-[2.5%] md:px-[3.5%] lg:px-[7.5%] 2xl:px-[8.68%] pt-12 sm:pt-14 md:pt-16 lg:pt-20 2xl:pt-[102px] flex flex-col gap-6 sm:gap-7 md:gap-8 lg:gap-10 2xl:gap-[52.50px] items-center">
 
-    <!-- Background huge text layer -->
-    <div class="absolute top-4 sm:top-6 lg:top-7 right-0 z-10 animate-pulse">
+    <div class="max-w-[1340px] mx-auto relative">
+        <!-- Background huge text layer -->
+    <div class="absolute -top-7 sm:-top-9 lg:-top-11 2xl:-top-20 right-0 z-10 animate-pulse">
         <?php get_template_part("svg/berbecue_svg"); ?>
     </div>
 
@@ -22,7 +23,7 @@
                     ?>
             
         </h2> 
-        <p class="body-text text-center">
+        <p class="body-text text-center pb-3">
              <?php
                     echo ! empty($desc)
                         ? wp_kses_post($desc)
@@ -33,7 +34,7 @@
     </div>
 
     <!-- kids card -->
-    <div class="kids-card flex flex-col md:flex-row gap-3.5 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8 2xl:gap-[34.80px] items-center">
+    <div class="kids-card flex flex-col flex-wrap items-center md:flex-row gap-3.5 sm:gap-5 md:gap-6 2xl:gap-[34.80px]">
 
         <?php
         $latest_kids = new WP_Query([
@@ -47,13 +48,13 @@
         if ($latest_kids->have_posts()): 
             while($latest_kids->have_posts()): $latest_kids->the_post();
         ?>
-          <div class="w-full sm:w-[320px] md:w-[400px] lg:w-[480px] xl:w-[545px] 
+          <div class="w-full md:w-[48%]
             h-auto flex-shrink-0 border border-[#E7E7E7] bg-white mx-auto">
 
 
 
   <?php if( has_post_thumbnail()) :?>
-    <div class="w-full sm:h-[320px] md:h-[450px] lg:h-[520px] xl:h-[590px] flex-shrink-0 relative overflow-hidden">
+    <div class="w-full md:h-[450px] lg:h-[520px] xl:h-[590px] flex-shrink-0 relative overflow-hidden">
         <img 
             src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" 
             alt="<?php the_title_attribute(); ?>" 
@@ -100,4 +101,5 @@
         ?>
 
     </div>
+     </div>
 </section>

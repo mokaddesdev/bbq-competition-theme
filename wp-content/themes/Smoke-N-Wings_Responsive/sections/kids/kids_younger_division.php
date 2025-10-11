@@ -9,10 +9,10 @@
 <section class="relative w-full px-[2.5%] md:px-[3.5%] lg:px-[5%] xl:px-[6.8%] mx-auto pt-7 sm:pt-9 md:pt-10 lg:pt-11 xl:pt-[58px] pb-10 overflow-hidden">
 
             <!-- container -->
-   <div class="w-full max-w-[1300px] flex flex-col md:flex-row gap-8 sm:gap-9 md:gap-11 xl:gap-[50px]">
+   <div class="w-full max-w-[1300px] mx-auto flex flex-col-reverse lg:flex-row gap-8 sm:gap-9 lg:items-center xl:items-start lg:gap-11 xl:gap-[50px]">
 
             <!-- left side text -->
-            <div class="relative w-full md:w-[49.9%] flex pt-8 sm:pt-10 md:pt-12 lg:pt-16 flex-col items-center md:items-start gap-5 md:gap-7 lg:gap-8">
+            <div class="relative w-full lg:w-[48%] flex pt-8 sm:pt-10 md:pt-12 lg:pt-16 flex-col items-center lg:items-start gap-5 md:gap-7 lg:gap-8 text-center lg:text-start">
                 <h2 class="body-heading leading-trim">
                      <?php
                     echo ! empty($title)
@@ -22,7 +22,7 @@
                     
                 </h2>
 
-                <p class="w-full body-text">
+                <p class="w-full body-text px-[3.5%] sm:pax-[7.5%] md:px-[12.5%] mx-auto lg:px-0">
                      <?php
                     echo ! empty($desc)
                         ? wp_kses_post($desc)
@@ -54,23 +54,23 @@
             </div>
 
         <!-- right side image with SVG overlay -->
-        <div class="relative w-full md:w-[47.5%]">
-            <div class="relative w-full h-[260px] md:h-[495px]">
-              <div class=" ml-0 md:-ml-5">
-                <!-- svg -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" viewBox="0 0 594 495" fill="none">
-                    <path d="M95 495H593.5V0H0L95 495Z" fill="#591419"/>
-                </svg> 
+             <!-- right side image -->
+            <div class="relative w-full lg:w-[52%] flex justify-center items-center lg:justify-end">
+                    <!-- background SVG shape -->
+                    <div
+                        class="kids-image-left-svg"
+                        style="clip-path: polygon(0 0, 100% 0%, 100% 100%, 25% 100%);">
+                    </div>
+                        <div
+                            class="kids-image-right">
+                       <img src="<?php echo ! empty($image)
+                                ? esc_url($image)
+                                : esc_url( get_template_directory_uri() . '/assets/images/youngerdivision.png' ); ?>"
+                                alt="about image"
+                                class="w-full h-full object-cover">
+                        </div>
                 </div>
 
-                <div class="absolute w-full h-[380px] md:w-[621px] md:h-[518px] left-0 md:-top-3 md:-left-9 -mr-3">
-                    <img src="<?php
-                            echo ! empty($image)
-                                ? esc_url($image)
-                                : esc_url( get_template_directory_uri() . '/assets/images/youngerdivision.png' );
-                        ?>" alt="<?php echo esc_attr(! empty($title) ? $title : 'Younger Division'); ?>" class="w-full h-full object-contain">
-                </div>
             </div>
-        </div>
      </div>
 </section>

@@ -77,15 +77,29 @@ ul, li {
 
 
 .scholar-image-left-svg{
-     @apply absolute z-10 w-[340px] h-[263px] sm:w-[490px] sm:h-[380px] md:w-[540px] md:h-[440px] lg:w-[480px] lg:h-[410px] xl:w-[530px] xl:h-[460px] 2xl:w-[580px] 2xl:h-[480px] bg-[#591419] dark:top-0 top-0 md:top-1.5 lg:top-2.5 xl:top-[9px] 2xl:top-3 left-1/2 lg:left-auto lg:right-7 2xl:right-3 -translate-x-1/2 lg:translate-x-0 sm:right-auto transition-all duration-300
+     @apply absolute z-10 w-[340px] h-[263px] sm:w-[490px] sm:h-[380px] md:w-[540px] md:h-[440px] lg:w-[470px] lg:h-[400px] xl:w-[530px] xl:h-[450px] 2xl:w-[580px] 2xl:h-[480px] bg-[#591419] dark:top-0 top-0 md:top-1.5 lg:top-2.5 xl:top-[9px] 2xl:top-3 left-1/2 lg:left-auto lg:right-7 2xl:right-3 -translate-x-1/2 lg:translate-x-0 sm:right-auto transition-all duration-300
 }
 
 .scholar-image-right{
     @apply relative z-20 w-[350px] h-[280px] 
          sm:w-[500px] sm:h-[380px] md:w-[550px] md:h-[450px] 
-         lg:w-[540px] lg:h-[440px] xl:w-[575px] xl:h-[475px] 
+         lg:w-[520px] lg:h-[420px] xl:w-[565px] xl:h-[465px] 
          2xl:w-[605px] 2xl:h-[495px] mx-auto md:mx-0 overflow-hidden
 }
+
+
+.kids-image-left-svg{
+     @apply absolute z-10 w-[340px] h-[263px] sm:w-[490px] sm:h-[380px] md:w-[540px] md:h-[440px] lg:w-[470px] lg:h-[400px] xl:w-[530px] xl:h-[450px] 2xl:w-[580px] 2xl:h-[480px] bg-[#591419] dark:top-0 top-0 md:top-1.5 lg:top-2.5 xl:top-[9px] 2xl:top-3 left-1/2 lg:left-auto lg:right-7 2xl:right-3 -translate-x-1/2 lg:translate-x-0 sm:right-auto transition-all duration-300
+}
+
+.kids-image-right{
+    @apply relative z-20 w-[350px] h-[280px] 
+         sm:w-[500px] sm:h-[380px] md:w-[550px] md:h-[450px] 
+         lg:w-[560px] lg:h-[460px] xl:w-[595px] xl:h-[495px] 
+         2xl:w-[625px] 2xl:h-[505px] mx-auto md:mx-0 overflow-hidden
+}
+
+
 /* ==========================
  Reset Button design
  ============================== */
@@ -338,64 +352,70 @@ input#entry-form{
 }
 
 
-
-/* child entry form design */
-.form-data{
-    @apply pt-4;
-}
-.child-name-email, .child-parent-number, .parent-name-division{
-     @apply flex gap-[30px] pt-3;
-}
-.child-parent-number{
-    @apply mt-2.5;
+.form-data {
+  @apply pt-4;
 }
 
-.parent-name-division{
-    @apply mt-2.5;
+.child-name-email,
+.child-parent-number,
+.parent-name-division {
+  @apply flex flex-col sm:flex-row gap-[20px] sm:gap-[30px] pt-3;
 }
 
-.child-name-label, .child-email-label, .child-number-label, .parent-number-label, .parent-name-label, .parent-select-label, .child-message-label, .enrty_date-label{
-    @apply text-black font-jost text-[16px] font-normal leading-[24px];
+input#child-name,
+input#child-email,
+input#parent-name {
+  @apply w-full sm:w-[240.60px] text-[#7C7C7C] font-jost text-[16px] px-3.5 py-[11px] mt-0.5 outline-none border border-[#CCCCCC];
 }
 
-
-input#child-name, input#child-email, input#parent-name{
-   @apply text-[#7C7C7C] w-[240.60px] font-jost text-[16px] font-normal leading-[24px] px-3.5 py-[11px] mt-0.5 outline-none border border-[#CCCCCC];
+.parent-number-input,
+.child-number-input {
+  @apply flex gap-1 items-center px-3.5 py-[5px] border border-[#CCCCCC];
 }
 
-.parent-number-input, .child-number-input{
-    @apply flex gap-1 items-center px-3.5 py-[5px] border border-[#CCCCCC];
-}
-input#child-phone, input#parent-phone{
-    @apply text-[#7C7C7C] w-[160.60px] font-jost text-[16px] font-normal leading-[24px] mt-0.5 outline-none border-none;
+input#child-phone,
+input#parent-phone {
+  @apply w-full min-w-[220px] sm:min-w-[150px] sm:w-[160.60px] text-[#7C7C7C] font-jost text-[16px] mt-0.5 outline-none border-none;
 }
 
-select#division-select{
-    @apply text-[#7C7C7C] w-[240.60px] font-jost text-[16px] font-normal leading-[24px] appearance-auto px-3.5 py-[11px] mt-0.5 outline-none border border-[#CCCCCC];
+select#division-select {
+  @apply w-full sm:w-[240.60px] text-[#7C7C7C] font-jost text-[16px] px-3.5 py-[11px] mt-0.5 outline-none border border-[#CCCCCC];
 }
 
-input#enrty_date{
-     @apply text-[#7C7C7C] w-[510px] font-jost text-[16px] font-normal leading-[24px] appearance-none px-3.5 py-[11px] mt-0.5 outline-none border border-[#CCCCCC];
+input#enrty_date {
+  @apply w-full sm:w-[510px] text-[#7C7C7C] font-jost text-[16px] px-3.5 py-[11px] mt-0.5 outline-none border border-[#CCCCCC];
 }
 
-.enrty_date{
-    @apply mt-5;
+textarea#child-message {
+  @apply w-full sm:w-[512px] h-[100px] sm:h-[65.60px] text-[#7C7C7C] font-jost text-[16px] px-3.5 py-[11px] mt-0.5 outline-none border border-[#CCCCCC];
 }
 
-.child-message{
-    @apply mt-5;
-}
-textarea#child-message{
-     @apply text-[#7C7C7C] w-[512px] h-[65.60px] font-jost text-[16px] font-normal leading-[24px] appearance-none px-3.5 py-[11px] mt-0.5 outline-none border border-[#CCCCCC];
+.send_message_button input#child-form {
+  @apply mt-4 w-full sm:w-[512px] h-[48px] bg-[#16396F] text-white text-center font-jost text-[16px] font-semibold leading-[24px] py-[13.99px] px-[24px] capitalize;
 }
 
-.send_message_button{
-    @apply mt-5;
+/* Contact Form */
+.first_name-email {
+  @apply flex flex-col sm:flex-row md:flex-col lg:flex-row gap-[20px] sm:gap-[29px] mt-3 mb-5;
 }
-.send_message_button input#child-form{
-     @apply inline-block w-[512px] h-[48px] flex-shrink-0 bg-[#16396F] text-white text-center font-['Jost'] text-[16px] font-semibold leading-[24px] py-[13.99px] px-[24px] capitalize;
 
+input#first-name-input,
+input#contact-email {
+  @apply w-full sm:w-[240.60px] text-[#7C7C7C] font-jost text-[16px] px-3.5 py-[14px] mt-0.5 outline-none border border-[#CCCCCC];
 }
+
+input#contact-subject {
+  @apply w-full sm:w-[512px] text-[#7C7C7C] font-jost text-[16px] px-3.5 py-[12px] mt-1.5 mb-5 outline-none border border-[#CCCCCC];
+}
+
+textarea#contact-message {
+  @apply w-full sm:w-[512px] h-[128px] text-[#7C7C7C] font-jost text-[16px] px-3.5 py-[10px] outline-none border border-[#CCCCCC];
+}
+
+input#contact-form {
+  @apply w-full sm:w-[302px] md:w-[360px] lg:w-[512px] mt-8 h-[48px] bg-[#F65600] text-white font-bebas text-[18px] sm:text-[20px] uppercase;
+}
+
 
 
 
