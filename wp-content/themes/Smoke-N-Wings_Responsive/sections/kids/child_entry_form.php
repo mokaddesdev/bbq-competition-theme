@@ -26,7 +26,7 @@
 
         <!-- left card -->
         <div class="left w-full lg:w-[49.2%]">
-            <div class="w-full h-auto lg:h-[727.523px] pt-6 sm:pt-8 lg:pt-[37.86px] pl-5 sm:pl-6 lg:pl-[39.50px] bg-white shadow-[ -12px_49px_94px_0_rgba(85,89,90,0.05) ] rounded-lg">
+            <div class="w-full h-auto lg:h-[727.523px] pt-6 sm:pt-8 lg:pt-[37.86px] pl-5 sm:pl-6 lg:pl-[39.50px] bg-white shadow-[ -12px_49px_94px_0_rgba(85,89,90,0.05) ] rounded-lg flex flex-col items-center justify-center mx-auto">
                 <h2 class="text-[#01112D] font-bebas text-[28px] sm:text-[34px] md:text-[36px] lg:text-[38px] leading-[1.2]">
                     <?php echo esc_html($title); ?>
                 </h2>
@@ -35,7 +35,7 @@
                 </h3>
 
                 <div class="form-data mt-4 sm:mt-5 pr-4 sm:pr-5 md:pr-6">
-                    <?php echo do_shortcode('[contact-form-7 id="e131480" title="Child Entry Form"]'); ?>
+                       <?php echo do_shortcode('[contact-form-7 id="e131480" title="Child Entry Form"]'); ?>
                 </div>
             </div>
         </div>
