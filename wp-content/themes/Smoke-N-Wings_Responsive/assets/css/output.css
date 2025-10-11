@@ -296,6 +296,18 @@
   .top-40 {
     top: calc(var(--spacing) * 40);
   }
+  .top-50 {
+    top: calc(var(--spacing) * 50);
+  }
+  .top-56 {
+    top: calc(var(--spacing) * 56);
+  }
+  .top-80 {
+    top: calc(var(--spacing) * 80);
+  }
+  .top-96 {
+    top: calc(var(--spacing) * 96);
+  }
   .top-\[78\%\] {
     top: 78%;
   }

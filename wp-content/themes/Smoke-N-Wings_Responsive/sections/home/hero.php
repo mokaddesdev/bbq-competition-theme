@@ -7,13 +7,6 @@ $hero_button_text_right = get_theme_mod('hero_button_text_right', 'Check Out The
 
 <section class="relative w-full h-[270px] bg-white dark:bg-white sm:h-[330px] md:h-[400px] lg:h-[480px] xl:h-[560px] 2xl:max-h-[621px] overflow-hidden">
 
-<div class="right-3 top-40 fixed z-50">
-          <button id="theme-toggle"
-      class="px-3 py-3 rounded-full bg-gray-800 text-white dark:bg-[#e65314] dark:text-white transition-all duration-300"
-    > </button>
-
-</div>
-
   <!-- Background color layer -->
   <div class="absolute inset-0 bg-[#F8B895] opacity-[0.73] z-0"></div>
 

@@ -12,6 +12,12 @@
 <header id="main-header" class="w-full transition-all duration-500 ease-in-out opacity-100 bg-transparent px-[2.5%] md:px-[3%] lg:px-[4.5%] 2xl:px-[6.944%] <?php echo is_front_page() ? 'py-0' : 'py-1'; ?>">
 <!-- header-container -->
 <div class="header-container mx-auto max-w-[1300px] flex items-center justify-between relative">
+    <div class="right-3 top-96 fixed z-50">
+          <button id="theme-toggle"
+      class="px-3 py-3 rounded-full bg-gray-800 text-white dark:bg-[#e65314] dark:text-white transition-all duration-300"
+    > </button>
+
+</div>
     <!-- logo -->
     <div class="logo w-[160px] h-[75px] sm:w-[150px] sm:h-[75px] md:w-[140px] md:h-[70px] lg:w-[210px] lg:h-[105px]">
         <a href="<?php echo home_url(); ?>" class="text-white hover:underline">
