@@ -15,13 +15,13 @@
         <!-- side right side button text -->
         <div class="relative w-full flex items-center md:items-end justify-between">
             <!-- left -->
-            <div class="about-left w-2/3 xl:w-1/2 flex flex-col pt-[22px] items-start gap-5">
+            <div class="about-left max-w-2/3 md:max-w-1/2 flex flex-col pt-[22px] items-start gap-5">
                 <h2 class="home-heading">
                     <?php echo wp_kses_post(nl2br($best_bbq_title));?>
                 </h2>
             </div>
             <!-- right -->
-            <div class="button w-1/3 flex gap-2.5 items-center pt-24 justify-center">
+            <div class="button flex gap-2.5 items-center pt-24 justify-center">
                 <button id="best-bbq-prev" class="w-[44px] h-[44px] xl:w-[53px] xl:h-[53px] flex-shrink-0 p-[17px] rounded-none bg-[#F8B895] flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="23" viewBox="0 0 14 23" fill="none">
                         <path d="M12 1.5L3 11.5L12 21.5" stroke="white" stroke-width="3" />

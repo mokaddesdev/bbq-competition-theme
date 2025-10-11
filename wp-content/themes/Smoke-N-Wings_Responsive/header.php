@@ -37,9 +37,7 @@
         ]);
         ?>
     </nav>
-      <button id="theme-toggle"
-      class="px-3 py-3 rounded-full bg-gray-800 text-white dark:bg-[#e65314] dark:text-white transition-all duration-300"
-    > </button>
+
      <!-- desktop button -->
     <div class="button pr-3.5 hidden md:block">
         <a href="<?php echo esc_url( get_permalink( get_page_by_path('enter') ) ); ?>" 

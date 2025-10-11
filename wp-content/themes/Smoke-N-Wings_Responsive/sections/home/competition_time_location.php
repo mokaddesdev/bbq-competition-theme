@@ -17,13 +17,13 @@ $competition_description = get_theme_mod('competition_description', 'Lorem ipsum
 
 ?>
 
-<section class="w-full py-16 mx-auto pr-[8.6%]">
+<section class="w-full py-8 lg:py-10 xl:py-16 mx-auto pr-[3%] sm:pr-[3.5%] md:pr-[5%] lg:pr-[7.5%] xl:pr-[8.6%]">
 
-  <div class="max-w-[1300px] mx-auto flex flex-col md:flex-row justify-between items-center">
+  <div class="flex flex-col md:flex-row justify-between items-center max-w-[1330px] mx-auto">
 
     <!-- Left -->
-    <div class="relative flex-shrink-0 w-full xl:w-[697px] h-[161px]">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" viewBox="0 0 697 161" fill="none">
+    <div class="relative flex-shrink-0">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-[80%] max-w-[697px] min-h-[140px] max-h-[161px]"viewBox="0 0 697 161" fill="none">
         <path d="M-35.5 0H697L665 161H-35.5V0Z" fill="#591419" />
       </svg>
 

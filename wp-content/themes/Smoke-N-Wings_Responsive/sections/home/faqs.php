@@ -5,7 +5,8 @@
       $faq_title = get_theme_mod('faqs_heading_title', 'Frequently <span class="text-[#F65600]"> Asked </span> Questions');
    ?>
 
-<section class="w-full pt-3 px-[2.5%] md:px-[3.5%] lg:px-[7.5%] xl:px-[8.68%]">
+
+<section class="w-full pt-3 px-[2.5%] py-5 md:px-[3.5%] lg:px-[7.5%] xl:px-[8.68%]">
 
 <!-- max-w-1300px -->
  <div class="max-w-[1300px] mx-auto flex flex-col md:flex-row gap-[19.50px]">
@@ -31,7 +32,7 @@
   <!-- right faqs -->
   <div class=" bg-white w-full md:w-1/2">
 
-    <h2 class="home-heading text-right py-8">
+    <h2 class="home-heading text-center md:text-right py-8">
       <?php echo wp_kses_post(nl2br($faq_title)); ?>
     </h2>
 
@@ -57,17 +58,14 @@
 
             <span><?php the_title(); ?></span>
             <span class="icon text-2xl text-gray-600">
-              <?php if ($is_open): ?>
-                <!-- minus icon -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="3" viewBox="0 0 13 3" fill="none">
-                  <path d="M6 2.91155H5.03468H0V0.0144043H5.03468H5.5L7 0.014286L7.96532 0.0144043H13V2.91155H7.96532H7H6Z" fill="#591419" />
-                </svg>
-              <?php else: ?>
-                <!-- plus icon -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
-                  <path d="M5.03468 13V7.91143H0V5.01429H5.03468V0H7.96532V5.01429H13V7.91143H7.96532V13H5.03468Z" fill="#591419" />
-                </svg>
-              <?php endif; ?>
+              <?php if ($is_open){
+                   get_template_part("svg/minus_icon");
+              } else{
+                get_template_part("svg/plus_icon");
+              } 
+                  
+                ?>
+    
             </span>
           </button>
 
