@@ -1,41 +1,43 @@
 
-<section class="pt-[46.60px] mb-0.5 pb-6 w-full px-[2.5%] md:px-[3.5%] lg:px-[7.5%] 2xl:px-[8.68%]">
+<section class=" pt-8 xl:pt-[46.60px] mb-0.5 pb-6 w-full px-[2.5%] md:px-[3.5%] lg:px-[7.5%] 2xl:px-[8.68%]">
 
-<div class="container max-w-[1300px] flex flex-col gap-4 xl:gap-[49px]">
+  <div class="container max-w-[1300px] flex flex-col gap-6 md:gap-7 xl:gap-[49px]">
 
-<?php
-/**
- * Proper & clean loop for 
- */
+    <?php
+    /**
+     * Proper & clean loop for 
+     */
 
-$args = array(
-    'post_type'      => 'cook_site',  
-    'posts_per_page' => 3,   
-    'status' => 'publish',        
-    'orderby' => 'date',
-    'order' => 'DESC',    
-);
+    $args = array(
+        'post_type'      => 'cook_site',  
+        'posts_per_page' => 3,   
+        'status' => 'publish',        
+        'orderby' => 'date',
+        'order' => 'DESC',    
+    );
 
-$hav_query = new WP_Query( $args );
+    $hav_query = new WP_Query( $args );
 
-if ( $hav_query->have_posts() ) :
-    while ( $hav_query->have_posts() ) :
-        $hav_query->the_post();
-        ?>
-        <article class="w-full xl:w-[1176px] xl:h-[317px] flex flex-col items-center md:flex-row flex-shrink-0 border border-[#E7E7E7] bg-white">
+    if ( $hav_query->have_posts() ) :
+        while ( $hav_query->have_posts() ) :
+           $hav_query->the_post();
+         ?>
+
+        <article class="w-full xl:max-w-[1176px] xl:max-h-[317px] flex flex-col items-center md:flex-row flex-shrink-0 border border-[#E7E7E7] bg-white">
+
             <!-- left image -->
              <?php 
              if ( has_post_thumbnail() ) {
                 the_post_thumbnail( 'medium', array(
-                    'class' => 'w-full md:w-[545px] h-[317px] flex-shrink-0 object-cover',
+                    'class' => 'w-full md:w-[50%] 2xl:w-[545px] h-auto md:h-[317px] flex-shrink-0 object-cover',
                     'alt'   => esc_attr( get_the_title() ),
                 ) );
             }
             ?>
 
   <!-- Right Content -->
-  <div class="flex flex-col justify-between pl-12 pr-14 pt-10 pb-12 w-full">
-    <!-- 1️First Row: Title & Price -->
+  <div class="flex flex-col justify-between pl-12 pr-14 pt-10 pb-12 w-full md:w-[50%]">
+    <!-- First Row: Title & Price -->
     <div class="flex justify-between items-start -mt-0.5">
       <h2 class="text-black pt-2 font-bebas text-[34px] font-normal leading-[120%] not-italic">
         <?php echo esc_html( get_the_title() ); ?> 

@@ -1,116 +1,45 @@
     <?php
-    $title = get_theme_mod('enter_competition_title');
-    $desc  = get_theme_mod('enter_competition_description');
-    $form  = get_theme_mod('enter_competition_form_title');
+    $title = get_theme_mod('enter_competition_title', 'Enter Competition');
+
+    $desc  = get_theme_mod('enter_competition_description', 'We are excited to welcome your team to the 2024 SMOKE-N-WINGS BBQ CONTEST. Put your skills to the test for your chance to win cash prizes and be crowned the SMOKE-N-WINGS Grand Champion and the Idaho State Champion.<br><br>This KCBS sanctioned competition will be held June 28-29, 2024. Winning will make your team eligible for the American Royal and the Jack Daniels World Championship.');
+
+    $form  = get_theme_mod('enter_competition_form_title', 'Complete the <span class="text-[#F65600]">Entry Form</span> Below');
 
     ?>
 
-    <section class="relative w-full px-[2.5%] md:px-[3.5%] lg:pl-[7.5%] 2xl:pl-[8.68%] lg:pr-[40px] mx-auto py-3 lg:py-5">
+<section class="relative w-full px-4 sm:px-6 lg:px-[7.5%] 2xl:px-[8.68%] mx-auto py-6 lg:py-10">
 
-            <!-- Background huge text layer -->
-          <div class="absolute left-1/2 transform -translate-x-1/2 md:translate-x-0 top-6 md:right-0 z-10 opacity-100">
-                <?php get_template_part("svg/berbecue_svg"); ?>
-          </div>
+  <!-- Background huge text layer -->
+  <div class="absolute left-1/2 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-0 top-6 z-10 opacity-100">
+    <?php get_template_part("svg/berbecue_svg"); ?>
+  </div>
 
-        <!-- Foreground content layer -->
-        <div class="relative z-20 pt-8 xl:pt-[100px] xl:gap-[68px] max-w-[1300px] flex flex-col md:flex-row">
+  <!-- Foreground content -->
+  <div class="relative z-20 pt-10 xl:pt-[100px] flex flex-col md:flex-row gap-10 xl:gap-[68px] max-w-[1300px] mx-auto">
 
-                <!-- left side text -->
-                <div class=" w-full md:w-[36.25%] pt-9 md:pt-0 flex-shrink-0">
+    <!-- Left text -->
+    <div class="w-full md:w-1/2 pt-4 md:pt-0 flex-shrink-0">
+      <div class="relative md:sticky top-1 w-full flex flex-col gap-4 items-center md:items-start">
+        <h2 class="body-heading text-center md:text-start">
+          <?php echo wp_kses_post($title); ?>
+        </h2>
+        <p class="body-text text-center md:text-start">
+          <?php echo wp_kses_post($desc); ?>
+        </p>
 
-                    <div class="relative sticky top-1 right-0 -mt-2 w-full flex flex-col gap-3 items-center md:items-start">
-                        <!-- form heading -->
-                        <h2 class="body-heading">
-                            <?php
-                            if (! empty($title)) {
-                                echo wp_kses_post($title);
-                            } else {
-                                echo 'Enter Competition';
-                            }
-                            ?>
-                        </h2>
+        <?php get_template_part("sections/contact_information"); ?>
+      </div>
+    </div>
 
-                        <p class="body-text text-center md:text-start  pt-0.5">
-                            <?php
-                            if (! empty($desc)) {
-                                echo wp_kses_post($desc);
-                            } else {
-                                echo 'We are excited to welcome your team to the 2024 SMOKE-N-WINGS BBQ CONTEST. Put your skills to the test for your chance to win cash prizes and be crowned the SMOKE-N-WINGS Grand Champion and the Idaho State Champion.<br><br>This KCBS sanctioned competition will be held June 28-29, 2024. Winning will make your team eligible for the American Royal and the Jack Daniels World Championship.';
-                            }
-                            ?>
-                        </p>
+    <!-- Right form -->
+    <div class="w-full md:w-1/2 flex flex-col items-center md:items-start bg-white pt-6 md:pt-4 px-4 sm:px-6 xl:px-[40px] mx-auto shadow-[0_10px_60px_rgba(0,0,0,0.05)] rounded-lg">
+      <h2 class="text-[#16396F] text-center md:text-start font-bebas text-[28px] sm:text-[34px] md:text-[38px] xl:text-[40px] leading-[45px] sm:leading-[60px] md:leading-[70px] xl:leading-[80px] uppercase tracking-[0.76px]">
+        <?php echo wp_kses_post($form); ?>
+      </h2>
+      <div class="w-full sm:max-w-[90%] md:max-w-full mx-auto mt-3">
+        <?php echo do_shortcode('[contact-form-7 id="cb14ff8" title="Enter Competition"]'); ?>
+      </div>
+    </div>
 
-                        <!-- Contact Info crad -->
-                        <div class="px-[7.5%] md:pl-4 pt-4 w-full flex flex-col gap-9">
-                            <!-- email box -->
-                            <div class="w-full md:w-[469px] h-[60px] md:h-[99px] bg-[#FFF4EE] flex items-center justify-between">
-
-                                <!-- email icon box -->
-                                <?php get_template_part('svg/email_icon') ?>
-
-
-                                <!-- email -->
-                                <p class="text-[#16396F] font-bebas text-[16px] sm:text-[20px] xl:text-[23px] pt-1 font-normal leading-[81px] tracking-[0.46px] uppercase">
-                                    <?php echo esc_html(get_theme_mod('company_email', 'smokenwingsbbq@gmail.com')); ?>
-
-                                </p>
-                                <?php get_template_part('svg/right_contact_svg') ?>
-
-
-                            </div>
-
-                            <div class="w-full md:w-[469px] h-[60px] md:h-[99px] bg-[#FFF4EE] flex items-center justify-between">
-
-                                <!-- Left icon box -->
-
-                                <?php get_template_part('svg/calender_icon') ?>
-
-                                <!-- Center text -->
-                                <p class="text-[#16396F] font-bebas text-[16px] sm:text-[20px] xl:text-[23px] pt-1 font-normal leading-[81px] tracking-[0.46px] uppercase">
-                                    <?php echo esc_html(get_theme_mod('service_time', 'Mon - Fri 09:00 - 18:00')); ?>
-                                </p>
-
-                                <!-- Right shape -->
-                                <?php get_template_part('svg/right_contact_svg') ?>
-
-                            </div>
-
-                            <div class="w-full md:w-[469px] h-[60px] md:h-[99px] flex-shrink-0 bg-[#FFF4EE] flex items-center justify-between">
-
-                                <!-- Left icon box -->
-                                <?php get_template_part('svg/contact_icon_svg') ?>
-
-                                <!-- Center text -->
-                                <p class="text-[#16396F] font-bebas text-[16px] sm:text-[20px] xl:text-[23px] pt-1 font-normal leading-[81px] tracking-[0.46px] uppercase">
-                                    <?php echo esc_html(get_theme_mod('company_phone', 'Call (800) 123 45 67')); ?>
-                                </p>
-
-                                <!-- Right shape -->
-                                <?php get_template_part('svg/right_contact_svg') ?>
-
-                            </div>
-
-
-                        </div>
-
-                    </div>
-                </div>
-
-            <!-- right side image with SVG overlay -->
-            <!-- right -->
-            <div class="w-full md:w-[41.04%] flex flex-col items-center -ml-1 bg-white pt-9 md:pt-4 px-2 xl:px-[39.5px] mx-auto" style="box-shadow: -12px 49px 94px 0 rgba(85,89,90,0.05);">
-                    <h2 class="text-[#16396F] max-w-[220px] text-center md:text-start font-bebas text-[30px]  md:text-[34px] xl:text-[38px] font-normal leading-[44px] md:leading-[55px] xl:leading-[81px] tracking-[0.76px] uppercase">
-                        <?php
-                        if (! empty($form)) {
-                            echo wp_kses_post($form);
-                        } else {
-                            echo 'Complete the <span class="text-[#F65600]">Entry Form</span> Below';
-                        }
-                        ?>
-                    </h2>
-
-                    <?php echo do_shortcode('[contact-form-7 id="cb14ff8" title="Enter Competition"]'); ?>
-            </div>
-        </div>
-
-    </section>
+  </div>
+</section>

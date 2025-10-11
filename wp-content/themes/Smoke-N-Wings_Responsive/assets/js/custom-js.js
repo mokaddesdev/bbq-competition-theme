@@ -115,6 +115,7 @@ const $lightSvg = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="
         .addClass("opacity-100 bg-transparent");
     }
   });
+
 });
 
 

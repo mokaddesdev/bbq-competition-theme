@@ -22,10 +22,12 @@ $competition_description = get_theme_mod('competition_description', 'Lorem ipsum
   <div class="flex flex-col md:flex-row justify-between items-center max-w-[1330px] mx-auto">
 
     <!-- Left -->
-    <div class="relative flex-shrink-0">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-[80%] max-w-[697px] min-h-[140px] max-h-[161px]"viewBox="0 0 697 161" fill="none">
+    <div class="relative">
+
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-[100%] max-w-[697px] min-h-[140px] max-h-[161px]"viewBox="0 0 697 161" fill="none">
         <path d="M-35.5 0H697L665 161H-35.5V0Z" fill="#591419" />
       </svg>
+
 
       <!-- Text Over SVG -->
       <div class="absolute right-[100px] top-8 flex flex-col">
@@ -56,8 +58,8 @@ $competition_description = get_theme_mod('competition_description', 'Lorem ipsum
     </div>
 
      <!-- Right -->
-    <div class="right max-w-[534px] pt-2.5">
-      <p class="text-black text-right font-jost text-[19px] font-normal leading-normal tracking-[0.38px]">
+    <div class="right mx-auto max-w-[360px] sm:max-w-[600px] md:max-w-[534px] pt-2.5">
+      <p class="text-black text-center md:text-right font-jost text-base md:text-[19px] font-normal leading-normal tracking-[0.38px]">
         <?php echo esc_html($competition_description); ?>
       </p>
     </div>
