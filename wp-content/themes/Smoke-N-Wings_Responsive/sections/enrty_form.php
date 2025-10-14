@@ -22,7 +22,7 @@
         <h2 class="body-heading text-center md:text-start">
           <?php echo wp_kses_post($title); ?>
         </h2>
-        <p class="body-text text-center md:text-start dark:text-red-500">
+        <p class="body-text text-center md:text-start">
           <?php echo wp_kses_post($desc); ?>
         </p>
 

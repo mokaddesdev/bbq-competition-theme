@@ -46,8 +46,7 @@ ul, li {
 
 
 .body-text{
-    @apply text-base md:text-[18px] text-black font-jost font-normal leading-normal tracking-[0.36px] self-stretch;
-
+    @apply text-base md:text-[18px] text-black dark:text-white font-jost font-normal leading-normal tracking-[0.36px] self-stretch;
 }
 
 .body-heading{
@@ -207,22 +206,22 @@ ul, li {
 
 
 input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.team-name-input{
-    @apply w-full md:w-[100%] outline-none text-[#333] font-jost text-[16px] font-normal leading-[24px];
+    @apply w-full md:w-[100%] outline-none dark:text-black dark:text-black text-[#333] font-jost text-[16px] font-normal leading-[24px];
 }
 
 input.wpcf7-form-control.wpcf7-email.wpcf7-validates-as-required.wpcf7-text.wpcf7-validates-as-email.team-email-input{
-     @apply w-full md:w-[100%] outline-none text-[#333] font-jost text-[16px] font-normal leading-[24px];
+     @apply w-full md:w-[100%] outline-none text-[#333] dark:text-black font-jost text-[16px] font-normal leading-[24px];
 }
 
 input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.head-cook-input{
     @apply w-full outline-none;
 }
 input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.team-address-input{
-          @apply w-full md:w-[100%] outline-none text-[#333] font-jost text-[16px] font-normal leading-[24px];
+          @apply w-full md:w-[100%] outline-none text-[#333] dark:text-black font-jost text-[16px] font-normal leading-[24px];
 }
 
 input.wpcf7-form-control.wpcf7-tel.wpcf7-validates-as-required.wpcf7-text.wpcf7-validates-as-tel.team-phone-input{
-    @apply w-full md:w-[100%] ml-3 outline-none text-[#333] font-jost text-[16px] font-normal leading-[24px];
+    @apply w-full md:w-[100%] ml-3 outline-none text-[#333] dark:text-black text-[16px] font-normal leading-[24px];
 }
 
 .kcbs-member, .kcbs-phone{
@@ -236,15 +235,15 @@ input.wpcf7-form-control.wpcf7-tel.wpcf7-validates-as-required.wpcf7-text.wpcf7-
     @apply w-[20%]
 }
 select.wpcf7-form-control.wpcf7-select.wpcf7-validates-as-required.kcbs-member-input {
-  @apply w-full text-[#333] font-jost text-[16px] font-normal bg-white leading-[24px] pl-2 pr-8 outline-none border-none appearance-none rounded-md;
+  @apply w-full text-[#333] dark:text-black font-jost text-[16px] font-normal dark:bg-gray-400 bg-white leading-[24px] pl-2 pr-8 outline-none border-none appearance-none rounded-md;
 }
 
 .kcbs-member-input-icon {
-  @apply relative flex items-center border border-gray-200 rounded-md mt-1 w-full md:w-[100%] bg-white;
+  @apply relative flex items-center border border-gray-200 rounded-md mt-1 w-full md:w-[100%] dark:bg-gray-400 bg-white;
 }
 
 input.wpcf7-form-control.wpcf7-text.kcbs-number-input{
-     @apply w-full lg:w-[100%] outline-none text-[#333] font-jost text-[16px] font-normal leading-[24px];
+     @apply w-full lg:w-[100%] outline-none dark:text-black dark:text-black text-[#333] font-jost text-[16px] font-normal leading-[24px];
 }
 
 .head-cook{

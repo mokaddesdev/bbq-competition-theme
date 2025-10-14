@@ -23,7 +23,7 @@
            $hav_query->the_post();
          ?>
 
-        <article class="w-full xl:max-w-[1176px] xl:max-h-[317px] flex flex-col items-center md:flex-row flex-shrink-0 border border-[#E7E7E7] bg-white">
+        <article class="w-full xl:max-w-[1176px] xl:max-h-[317px] flex flex-col items-center md:flex-row flex-shrink-0 border border-[#E7E7E7] bg-white dark:bg-gray-400">
 
             <!-- left image -->
              <?php 
@@ -51,7 +51,7 @@
     </div>
 
     <!--Second Row: Description -->
-    <h3 class="text-[#7C7C7C] font-jost text-[18px] font-normal leading-[120%] not-italic -pt-1 w-full xl:w-[470px]">
+    <h3 class="text-[#7C7C7C] dark:text-white font-jost text-[18px] font-normal leading-[120%] not-italic -pt-1 w-full xl:w-[470px]">
       <?php echo esc_html( the_content()); ?> 
     </h3>
 
