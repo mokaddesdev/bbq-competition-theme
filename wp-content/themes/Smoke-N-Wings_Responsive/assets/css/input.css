@@ -55,7 +55,7 @@ ul, li {
 }
 
 .heading-text{
-   @apply text-[48px] font-bebas-pro font-extrabold uppercase tracking-[0.96px] text-white leading-[1];
+   @apply text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] xl:text-[48px] font-bebas-pro font-extrabold uppercase tracking-[0.96px] text-white leading-[1];
 }
 
 .home-heading{
@@ -98,6 +98,17 @@ ul, li {
          2xl:w-[625px] 2xl:h-[505px] mx-auto md:mx-0 overflow-hidden
 }
 
+
+.faqs-image-left-svg{
+     @apply absolute z-10 w-[340px] h-[263px] sm:w-[490px] sm:h-[380px] md:w-[540px] md:h-[440px] lg:w-[470px] lg:h-[400px] xl:w-[550px] xl:h-[450px] 2xl:w-[580px] 2xl:h-[480px] bg-[#591419] dark:top-0 top-0 left-1/2 lg:left-auto lg:right-7 2xl:right-3 -translate-x-1/2 lg:translate-x-0 sm:right-auto transition-all duration-300
+}
+
+.faqs-image-right{
+    @apply relative z-20 w-[350px] h-[280px] 
+         sm:w-[500px] sm:h-[380px] md:w-[550px] md:h-[450px] 
+         lg:w-[560px] lg:h-[460px] xl:w-[595px] xl:h-[495px] 
+         2xl:w-[625px] 2xl:h-[505px] mx-auto md:-ml-12 overflow-hidden
+}
 
 /* ==========================
  Reset Button design

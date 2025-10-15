@@ -5,17 +5,19 @@
 
 
 <section class="relative w-full pt-9 lg:pt-[50px] px-[2.5%] md:px-[3.5%] lg:px-[7.5%] xl:px-[8.68%] mx-auto">
-    <!-- Background huge text layer -->
-    <div class="absolute left-1/2 transition -translate-x-1/2 md:translate-x-0 md:left-auto md:right-10 top-5 lg:top-0 z-10 opacity-100">
-        <?php get_template_part("svg/berbecue_svg"); ?>
-    </div>
+
 
     <!-- Foreground content layer -->
     <div class="relative z-20 max-w-[1300px] mx-auto w-full flex flex-col gap-6">
+
+        <!-- Background huge text layer -->
+    <div class="absolute left-1/2 transition -translate-x-1/2 md:translate-x-0 md:left-auto lg:-right-14 xl:-right-16 2xl:-right-20 top-5 lg:top-0 z-10 opacity-100">
+        <?php get_template_part("svg/berbecue_svg"); ?>
+    </div>
         <!-- side right side button text -->
         <div class="relative w-full flex items-center md:items-end justify-between">
             <!-- left -->
-            <div class="about-left max-w-2/3 md:max-w-1/2 flex flex-col pt-[22px] items-start gap-5">
+            <div class="about-left max-w-2/3 xl:max-w-1/2 flex flex-col pt-[22px] items-start gap-5">
                 <h2 class="home-heading">
                     <?php echo wp_kses_post(nl2br($best_bbq_title));?>
                 </h2>

@@ -48,7 +48,6 @@ $about_left_image = get_theme_mod('about_left_image', get_template_directory_uri
       <?php if (!empty($about_left_image)): ?>
         <div
           class="image-right">
-
           <img
             src="<?php echo esc_url($about_left_image); ?>"
             alt="about image"

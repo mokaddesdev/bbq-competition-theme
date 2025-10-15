@@ -51,8 +51,7 @@
                     </a>
                 </div>
             </div>
-
-        <!-- right side image with SVG overlay -->
+            
              <!-- right side image -->
             <div class="relative w-full lg:w-[52%] flex justify-center items-center lg:justify-end">
                     <!-- background SVG shape -->
