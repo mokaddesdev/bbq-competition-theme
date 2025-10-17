@@ -60,7 +60,7 @@ $rules_card_description = get_theme_mod('rules_card_description', 'As a Master S
 
               <!-- Title & Time -->
               <div>
-                <div class="px-1 sm:px-6 md:px-1.5 lg:px-6 flex items-center justify-between">
+                <div class="px-1 sm:px-6 md:px-1.5 lg:px-6 flex flex-row md:flex-wrap items-center justify-between gap-2.5">
                   <h2 class="text-black font-bebas text-[26px] sm:text-[36px] md:text-[30px] lg:text-[38px] xl:text-[44px] font-normal leading-[1.2] tracking-tight">
                     <?php the_title(); ?>
                   </h2>

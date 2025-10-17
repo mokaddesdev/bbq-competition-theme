@@ -16,8 +16,10 @@ $image   = get_theme_mod(
 ?>
 
 
+<section class="w-full pt-7 -mb-5 px-[2.5%] md:px-[4.5%] lg:px-[7%] xl:px-[7.291%]">
 
-<section class="w-[1440px] flex gap-[20px] pt-7 -mb-5 px-[105px]">
+<!-- container -->
+ <div class="flex flex-col lg:flex-row gap-[20px] w-full max-w-[1300px]">
 
   <!-- left image -->
   <div class="w-[562.293px] ml-[2.50px] relative">
@@ -48,5 +50,6 @@ $image   = get_theme_mod(
       <?php echo wp_kses_post($desc);?>
     </p>
 
+  </div>
   </div>
 </section>

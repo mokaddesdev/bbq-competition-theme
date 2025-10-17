@@ -3,10 +3,10 @@
         $image   = get_theme_mod('competition_item_image');
     ?>
 
-<section class="relative w-[1440px] px-[125px] mx-auto pt-[38px] pb-6">
+<section class="relative w-full px-[2.5%] md:px-[3.5%] lg:px-[7.5%] xl:px-[8.68%] mx-auto pt-[38px] pb-6">
 
     <!-- Foreground content layer -->
-    <div class="relative z-20 flex gap-16 w-full">
+    <div class="relative z-20 flex flex-col-reverse lg:flex-row gap-16 w-full max-w-[1300px]">
             <!-- left side text -->
             <div class="relative about-left pt-16 w-[569px] flex flex-col gap-5">
                 <h2 class="body-heading">

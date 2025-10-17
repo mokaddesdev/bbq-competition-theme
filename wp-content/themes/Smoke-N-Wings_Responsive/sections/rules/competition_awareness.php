@@ -7,7 +7,7 @@
     ?>
 
 
-<section class="w-[1440px] flex gap-[34px] pt-16 pb-3 px-[125px]">
+<section class="w-full flex gap-[34px] pt-16 pb-3 px-[2.5%] md:px-[3.5%] lg:px-[7.5%] xl:px-[8.68%]">
 
   <!-- left image -->
   <div class="w-[562.293px] relative">
