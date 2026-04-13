@@ -7,7 +7,7 @@ $rules_card_description = get_theme_mod('rules_card_description', 'As a Master S
 <section class="relative w-full mx-auto px-[3%] md:px-[5%] lg:px-[7.5%] xl:px-[8.68%] py-12 md:py-16 xl:py-[95px]">
 
   <!-- Background huge text layer -->
-   <div class="absolute top-4 sm:top-5 md:top-6 left-1/2 -translate-x-1/2 md:left-[5%] lg:left-[7.5%] xl:left-[8.68%] md:translate-x-0 md:right-auto transition-all duration-300 z-10 opacity-100 w-[300px] sm:w-[350px] md:w-[400px] lg:w-[450px] h-auto xl:w-[530px] 2xl:w-[580px]">
+   <div class="animate-bounce absolute top-4 sm:top-5 md:top-6 left-1/2 -translate-x-1/2 md:left-[5%] lg:left-[7.5%] xl:left-[8.68%] md:translate-x-0 md:right-auto transition-all duration-300 z-10 opacity-100 w-[300px] sm:w-[350px] md:w-[400px] lg:w-[450px] h-auto xl:w-[530px] 2xl:w-[580px]">
         <?php get_template_part("svg/smoke_in_wings_svg"); ?>
     </div>
 

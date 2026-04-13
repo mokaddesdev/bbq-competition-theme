@@ -9,11 +9,17 @@ $title = get_the_title();
 $desc  = get_the_excerpt();
 ?>
 
-<section class="relative max-w-[1440px] mx-auto w-full h-[100px] md:h-[220px] mt-1 sm:mt-2 md:mt-3 flex items-center justify-center overflow-hidden bg-[url('./assets/images/hero/img/hero.jpg')]">
+<section class="relative max-w-[1440px] mx-auto w-full min-h-[140px] md:min-h-[200px] flex items-center justify-center bg-amber-200 py-4 md:py-6 lg:py-8">
 
-    <div class="relative pt-3 md:pt-6 z-10 text-center text-white flex flex-col items-center">
+    <img 
+        src="<?php echo esc_url( THEME_DIR_URI . '/assets/images/breadcrumb-bg.png' ); ?>" 
+        class="absolute top-0 left-0 z-0 w-full h-full object-cover"
+        alt=""
+    >
 
-        <div class="font-bebas text-[18px] sm:text-[20px] md:text-[24px] flex items-center gap-3 leading-[34px]">
+    <div class="relative z-10 text-center text-white flex flex-col items-center">
+
+        <div data-aos="fade-down" class="font-bebas text-[18px] sm:text-[20px] md:text-[24px] flex items-center gap-3 leading-[34px]">
 
             <a href="<?php echo esc_url( home_url() ); ?>" class="text-white hover:underline">
                 <?php esc_html_e( 'Home', 'smokewings' ); ?>
@@ -28,7 +34,7 @@ $desc  = get_the_excerpt();
         </div>
 
         <?php if ( ! empty( $desc ) ) : ?>
-            <p class="pt-0 md:pt-3 font-bebas text-[26px] sm:text-[34px] md:text-[48px] uppercase md:tracking-[0.96px]">
+            <p data-aos="zoom-in" class="pt-0 md:pt-1.5 lg:pt-3 font-bebas text-[26px] sm:text-[34px] md:text-[48px] uppercase md:tracking-[0.96px]">
                 <?php echo esc_html( $desc ); ?>
             </p>
         <?php endif; ?>

@@ -1,7 +1,20 @@
 jQuery(document).ready(function($){
 
+    $(window).on('load scroll', function () {
+        if($(this).scrollTop() > 200){
+          $('.scroll-top-btn').addClass('show');
+    } else {
+      $('.scroll-top-btn').removeClass('show');
+    }
+    });
+
+     $('.scroll-top-btn').click(function () {
+    $('html, body').animate({ scrollTop: 0 }, 60);
+    return false;
+  });
+  
     /*----- menu icon toggle -----*/
-   $("#menuBtn").click(function(){
+    $("#menuBtn").click(function(){
         $("#navPhone").removeClass("translate-x-full").addClass("translate-x-0");
     });
 
@@ -9,36 +22,39 @@ jQuery(document).ready(function($){
         $("#navPhone").removeClass("translate-x-0").addClass("translate-x-full");
     });
 
-   $('.best-bbq-post-gallery').slick({
-        slidesToShow: 4,
+    /*----- Slick -----*/
+    const $slider = $('.best-bbq-post-gallery');
+
+    if($slider.length > 0 ){
+        $slider.slick({
+             slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
-        dots: false,
-        pauseOnHover: false,
         infinite: true,
         speed: 700,
         arrows: false,
         cssEase: 'linear',
-        responsive: [
-            { breakpoint: 640, settings: { slidesToShow: 1 } },   
-            { breakpoint: 768, settings: { slidesToShow: 2 } },   
-            { breakpoint: 1024, settings: { slidesToShow: 3 } },  
-            { breakpoint: 1280, settings: { slidesToShow: 4 } },  
-            { breakpoint: 1536, settings: { slidesToShow: 4 } }  
-        ]
-    });
-
+        pauseOnHover: false,
+        variableWidth: false,
+        centerMode: false,
+            responsive: [
+                { breakpoint: 640, settings: { slidesToShow: 1 } },   
+                { breakpoint: 768, settings: { slidesToShow: 2 } },   
+                { breakpoint: 1024, settings: { slidesToShow: 3 } },  
+                { breakpoint: 1280, settings: { slidesToShow: 4 } }
+            ]
+        });
+    }
+    if($slider.length > 0 ){
     $('#best-bbq-prev').click(function() { 
-        $('.best-bbq-post-gallery').slick('slickPrev'); 
+        $slider.slick('slickPrev'); 
     });
+
     $('#best-bbq-next').click(function() { 
-        $('.best-bbq-post-gallery').slick('slickNext'); 
+        $slider.slick('slickNext'); 
     });
-
-
- 
-
+  }
 
   $(".faq-btn").click(function(){
     const content = $(this).next(".faq-content");
@@ -66,20 +82,17 @@ jQuery(document).ready(function($){
     }
   });
 
-  console.log("Best Check");
-
   // handle troggle button
 
   const $tgBtn = $("#theme-toggle");
-  const $header = $("#main-header");
 
-  const $darksvg = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  const $darksvg = `<p class="animate-bounce"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
   <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
-</svg>`;
+</svg></p>`;
 
-const $lightSvg = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+const $lightSvg = `<p class="animate-bounce"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
-</svg>`
+</svg></p>`
 
 
   if( 
@@ -104,29 +117,48 @@ const $lightSvg = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="
     }
   });
 
-   $(window).on("scroll", function () {
-    if ($(this).scrollTop() > 350) {
-      $header
-        .removeClass("opacity-100 bg-transparent")
-        .addClass("opacity-100 fixed bg-gray-100 z-50 dark:bg-gray-800 shadow-md");
-    } else {
-      $header
-        .removeClass("opacity-100 fixed bg-gray-100 dark:bg-gray-800 shadow-md")
-        .addClass("opacity-100 bg-transparent");
-    }
-  });
+});
+
+window.addEventListener('load', function () {
+
+    const loader = document.querySelector(".preloader");
+
+    if (loader) {
+        setTimeout(() => {
+            loader.classList.add("preloader-hidden");
+
+            loader.addEventListener('transitionend', () => {
+                loader.remove();
+                AOS.refresh();
+            });
+
+        }, 500);
+    } 
 
 });
 
-window.addEventListener('load', () => {
-    const loader = document.querySelector(".preloader");
-    if ( loader ) {
-      setTimeout( () => {
-         loader.classList.add("preloader-hidden");
-
-    loader.addEventListener('transitionend', () => {
-        loader.remove();
+window.addEventListener('load', function () {
+  if ( typeof AOS !== 'undefined' ) {
+    AOS.init( {
+      offset: 80,
+      duration: 900,          
+      easing: 'ease-out-quart',
+      once: true,
+      anchorPlacement: 'top-bottom',
+      throttleDelay: 0,
+      debounceDelay: 50,
     } );
-      }, 500 );
-    }
+  }
+  AOS.refresh();
 } );
+
+let lastScrollY = window.scrollY;
+window.addEventListener("scroll", function () {
+    const header = document.getElementById("main-header");
+    const currentScrollY = window.scrollY;
+    if (currentScrollY > 400 && currentScrollY > lastScrollY) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});

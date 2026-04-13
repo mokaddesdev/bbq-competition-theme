@@ -13,7 +13,7 @@ $desc  = get_theme_mod( 'kids_type_section_heading_description', "The Kid’s Q 
 
     <div class="max-w-[1340px] mx-auto relative">
         <!-- Background huge text layer -->
-        <div class="absolute -top-7 sm:-top-9 lg:-top-11 2xl:-top-20 right-0 z-10 animate-pulse">
+        <div class="animate-bounce absolute -top-7 sm:-top-9 lg:-top-11 2xl:-top-20 right-0 z-10">
             <?php get_template_part("svg/berbecue_svg"); ?>
         </div>
 

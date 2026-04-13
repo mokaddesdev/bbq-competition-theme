@@ -4,7 +4,6 @@
  *
  * @package smokewings
  */
-defined( 'ABSPATH' ) || exit;
 
 get_header();
 

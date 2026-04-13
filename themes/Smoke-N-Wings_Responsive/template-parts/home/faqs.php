@@ -30,7 +30,7 @@ $faq_title  = get_theme_mod(
                 >
             <?php endif; ?>
 
-            <div class="absolute inset-0 bg-white/10"></div>
+            <div class="absolute inset-0 bg-white/10 dark:hidden"></div>
 
         </div>
 

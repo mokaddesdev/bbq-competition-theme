@@ -23,7 +23,7 @@ if ($enter_page) {
     <div class="relative z-20 flex flex-col gap-12 w-full max-w-[1300px] mx-auto">
 
       <!-- Background huge text layer -->
-    <div class="absolute -top-10 lg:-top-20 right-0 z-10 opacity-100">
+    <div class="animate-bounce absolute -top-10 lg:-top-20 right-0 z-10 opacity-100">
         <?php get_template_part("svg/berbecue_svg"); ?>
     </div>
 

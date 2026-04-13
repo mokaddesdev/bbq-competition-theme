@@ -49,7 +49,7 @@
   <div class="relative h-full w-full bg-[#FFE4D5] transform -skew-x-[11deg] origin-bottom-right z-10 overflow-hidden">
     
     <!-- SVG Elements -->
-    <div class="absolute top-0 flex flex-col gap-3 lg:gap-4 xl:gap-5 h-full w-full left-0 skew-x-[11deg] z-20">
+    <div class="animate-pulse absolute top-0 flex flex-col gap-3 lg:gap-4 xl:gap-5 h-full w-full left-0 skew-x-[11deg] z-20">
  <?php get_template_part('svg/smoke_in_wings2_oneline_svg_data_shap'); ?>
  <?php get_template_part('svg/smoke_in_wings2_oneline_svg_data_shap'); ?>
   <?php get_template_part('svg/smoke_in_wings2_oneline_svg_data_shap'); ?>

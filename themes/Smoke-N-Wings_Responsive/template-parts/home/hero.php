@@ -18,7 +18,7 @@ $hero_button_text_right = get_theme_mod('hero_button_text_right', 'Check Out The
  <div class="relative max-w-[1440px] mx-auto h-full absolute inset-0">
 
   <!-- Background huge text layer -->
-  <div class="absolute inset-0 top-4 sm:top-8 md:top-3 md:gap-3.5 flex flex-col gap-7 sm:gap-12 md:justify-between items-center z-10 text-[65px] sm:text-[110px] md:text-[130px] lg:text-[200px] xl:text-[207px] 2xl:text-[237px] font-bebas-pro font-extrabold uppercase leading-12 md:leading-[0.85] text-[rgba(248,184,149,0.45)] text-center w-full max-w-[1300px] mx-auto">
+  <div class="animate-pulse absolute inset-0 top-4 sm:top-8 md:top-3 md:gap-3.5 flex flex-col gap-7 sm:gap-12 md:justify-between items-center z-10 text-[65px] sm:text-[110px] md:text-[130px] lg:text-[200px] xl:text-[207px] 2xl:text-[237px] font-bebas-pro font-extrabold uppercase leading-12 md:leading-[0.85] text-[rgba(248,184,149,0.45)] text-center w-full max-w-[1300px] mx-auto">
       <h1>Smoke-N-Wings</h1>
       <h1>Idaho State BBQ</h1>
       <h1>Competition</h1>
@@ -34,7 +34,7 @@ $hero_button_text_right = get_theme_mod('hero_button_text_right', 'Check Out The
           echo esc_url( $enter_link );
       ?>" class="absolute -left-3 top-[40%] sm:top-[80%] md:top-[43%] w-[35%] md:w-[35.7%] text-center z-10">
 
-          <div class="relative w-full h-[78px] md:h-[88px]">
+          <div data-aos="fade-right" class="relative w-full h-[78px] md:h-[88px]">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 514 88" fill="none" class="w-full h-full">
                   <path d="M0 0H514L490.703 88H0V0Z" fill="#F65600"/>
               </svg>
@@ -52,7 +52,7 @@ $hero_button_text_right = get_theme_mod('hero_button_text_right', 'Check Out The
       <a href="<?php echo esc_url( get_permalink( get_page_by_path('rules') ) ); ?>" 
          class="absolute -right-3.5 top-[40%] sm:top-[80%] md:top-[43%] w-[35%] md:w-[35.7%] text-center z-10">
 
-          <div class="relative w-full h-[70px] md:h-[88px] ml-auto">
+          <div data-aos="fade-left" class="relative w-full h-[70px] md:h-[88px] ml-auto">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 514 88" fill="none" class="w-full h-full">
                   <path d="M514 88H0L23.2974 0H514V88Z" fill="#591419"/>
               </svg>
@@ -66,7 +66,7 @@ $hero_button_text_right = get_theme_mod('hero_button_text_right', 'Check Out The
       </a>
 
       <!-- Hero Image -->
-      <div class="absolute bottom-0 md:bottom-0 left-1/2 -translate-x-1/2 w-[240px] sm:w-[300px] md:w-[350px] lg:w-[450px] xl:w-[500px] 
+      <div data-aos="zoom-in" class="absolute bottom-0 md:bottom-0 left-1/2 -translate-x-1/2 w-[240px] sm:w-[300px] md:w-[350px] lg:w-[450px] xl:w-[500px] 
           h-auto z-10">
           <?php if ( ! empty( $hero_image ) ) : ?>
           <img src="<?php echo esc_url( $hero_image ); ?>" alt="<?php echo esc_attr__( "Hero Image", "smokewings" ); ?>" 

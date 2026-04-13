@@ -4,7 +4,7 @@
   <div class="relative z-20 w-full max-w-[1300px] mx-auto">
     
       <!-- Background huge text layer -->
-   <div class="absolute -top-14 lg:-top-16 2xl:-top-20 left-1/2 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-0 transition z-10 opacity-100">
+   <div class="animate-bounce absolute -top-14 lg:-top-16 2xl:-top-20 left-1/2 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-0 transition z-10 opacity-100">
     <?php get_template_part("svg/berbecue_svg"); ?>
 </div>
 
@@ -46,7 +46,10 @@
           ?>
         </h2>
         <div class="mt-4 md:mt-6 mx-auto">
-          <?php echo do_shortcode('[contact-form-7 id="7f08c2e" title="Contact Us"]'); ?>
+          <?php 
+          // echo do_shortcode('[contact-form-7 id="dcad719" title="Contact Us Form"]'); 
+          ?>
+           <?php echo do_shortcode('[contact-form-7 id="c35b022" title="Contact Us Form"]'); ?>
         </div>
       </div>
     </div>

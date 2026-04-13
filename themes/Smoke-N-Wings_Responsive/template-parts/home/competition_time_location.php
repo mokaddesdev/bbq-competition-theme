@@ -27,7 +27,9 @@ $competition_description = get_theme_mod('competition_description', 'Lorem ipsum
         style="clip-path: polygon(0 0, 100% 0%, 89% 100%, 0% 100%);"
       >
         <!-- Text Over SVG -->
-        <div class="flex flex-col items-center">
+        <div data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000" class="flex flex-col items-center">
           <div class="flex gap-1 sm:gap-5 xl:gap-[70px] justify-center">
             <!-- Time -->
             <div class="time -ml-7 lg:ml-0 flex flex-col items-center gap-0.5">
@@ -58,7 +60,7 @@ $competition_description = get_theme_mod('competition_description', 'Lorem ipsum
 
      <!-- Right -->
     <div class="right mx-auto max-w-[360px] sm:max-w-[600px] lg:max-w-[400px] xl:max-w-[534px] pt-2.5">
-      <p class="text-black dark:text-white text-center lg:text-right font-jost text-base md:text-[19px] font-normal leading-normal tracking-[0.38px]">
+      <p data-aos="fade-left" class="text-black dark:text-white text-center lg:text-right font-jost text-base md:text-[19px] font-normal leading-normal tracking-[0.38px]">
         <?php echo esc_html($competition_description); ?>
       </p>
     </div>

@@ -7,7 +7,12 @@
 $sponsor_title = get_theme_mod( 'sponsor_page_heading_title', 'our featured <span class="text-[#F65600]"> sponsors </span>' );
 ?>
 
-<section class="w-full pt-10 sm:pt-13 md:pt-16 lg:pt-20 2xl:pt-[115px] pb-[34px] px-[5.83%] flex flex-col items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12 2xl:gap-16">
+<section class="relative w-full pt-10 sm:pt-13 md:pt-16 lg:pt-20 2xl:pt-[115px] pb-[34px] px-[5.83%] flex flex-col items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12 2xl:gap-16">
+
+  <!-- Background huge text layer -->
+   <div class="animate-bounce absolute top-8 lg:top-10 left-1/2 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-0 transition z-10 opacity-100">
+    <?php get_template_part("svg/berbecue_svg"); ?>
+</div>
     <!-- heading -->
     <div>
         <?php if ( ! empty( $sponsor_title ) ) : ?>
